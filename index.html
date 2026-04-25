@@ -2,6 +2,7 @@
 <html lang="es" class="scroll-smooth">
 
 <head>
+    <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Bernabé Carrasco | Psicoterapeuta & Executive Coach</title>
@@ -111,7 +112,7 @@
     </style>
 </head>
 
-<body class="font-sans antialiased selection:bg-brand-accent selection:text-white relative">
+<body class="font-sans antialiased selection:bg-brand-accent selection:text-white relative pb-20 md:pb-0">
 
     <!-- Navbar (Clean & Minimalist) -->
     <nav class="fixed w-full z-50 transition-all duration-500 pt-6 pb-6 bg-transparent" id="navbar">
@@ -143,9 +144,9 @@
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-accent transition-all group-hover:w-full"></span>
                     </a>
-                    <a href="#beneficios"
+                    <a href="#trayectoria"
                         class="text-sm font-medium text-slate-600 hover:text-brand-accent transition-colors relative group">
-                        Beneficios
+                        Trayectoria
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-accent transition-all group-hover:w-full"></span>
                     </a>
@@ -187,8 +188,8 @@
                     mí</a>
                 <a href="#servicios"
                     class="mobile-link block text-2xl font-serif font-medium text-brand-primary tap-highlight-transparent">Servicios</a>
-                <a href="#beneficios"
-                    class="mobile-link block text-2xl font-serif font-medium text-brand-primary tap-highlight-transparent">Beneficios</a>
+                <a href="#trayectoria"
+                    class="mobile-link block text-2xl font-serif font-medium text-brand-primary tap-highlight-transparent">Trayectoria</a>
                 <a href="#actualidad"
                     class="mobile-link block text-2xl font-serif font-medium text-brand-primary tap-highlight-transparent">Actualidad</a>
                 <div class="pt-8">
@@ -235,24 +236,23 @@
 
                     <h1
                         class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-brand-primary leading-[1.1] mb-6">
-                        Transforma tu Liderazgo. <br>
-                        <span class="text-brand-accent italic font-normal">Escala tu Organización.</span>
+                        Clínica, liderazgo <br>
+                        <span class="text-brand-accent italic font-normal">y transformación.</span>
                     </h1>
 
-                    <p class="text-lg text-slate-600 mb-10 max-w-xl leading-relaxed">
-                        Métodos fundamentados en neurociencias y biología cultural para superar bloqueos directivos,
-                        resolver crisis de equipos y alcanzar el alto desempeño sin sacrificar tu bienestar psicológico.
+                    <p class="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
+                        Psicoterapia psicoanalítica, coaching ejecutivo y formación para equipos.
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="https://wa.me/56974983850?text=Hola%20Bernabé,%20me%20gustaría%20agendar%20una%20sesión%20diagnóstica."
                             target="_blank"
                             class="inline-flex justify-center items-center px-8 py-4 bg-brand-primary text-white text-base font-medium rounded-full hover:bg-slate-800 transition-all shadow-premium hover:shadow-premium-hover transform hover:-translate-y-1 tap-highlight-transparent w-full sm:w-auto">
-                            Agendar Diagnóstico
+                            Agendar
                         </a>
                         <a href="#servicios"
                             class="inline-flex justify-center items-center px-8 py-4 bg-white text-brand-primary border border-slate-200 text-base font-medium rounded-full hover:border-brand-primary hover:bg-slate-50 transition-all tap-highlight-transparent w-full sm:w-auto">
-                            Explorar Servicios
+                            Servicios
                         </a>
                     </div>
 
@@ -269,8 +269,8 @@
                                 alt="Cliente">
                         </div>
                         <div class="text-sm text-slate-500 font-medium">
-                            <strong class="text-brand-primary block">+20 años de experiencia</strong>
-                            acompañando a líderes corporativos.
+                            <strong class="text-brand-primary block">+20 años</strong>
+                            clínica y organizaciones.
                         </div>
                     </div>
                 </div>
@@ -310,8 +310,7 @@
     <!-- TRUST LOGOS (Minimal) -->
     <section class="py-12 bg-white border-y border-slate-100 reveal">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-            <p class="text-center text-xs font-semibold text-slate-400 tracking-[0.2em] uppercase mb-8">Organizaciones e
-                Instituciones que confían</p>
+            <p class="text-center text-xs font-semibold text-slate-400 tracking-[0.2em] uppercase mb-8">Experiencia con</p>
             <div
                 class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 sm:gap-x-20 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
                 <div class="text-lg font-serif font-bold text-slate-600 flex items-center"><i
@@ -327,450 +326,197 @@
     </section>
 
     <!-- SOBRE MÍ SECTION -->
-    <section id="sobre-mi" class="py-24 lg:py-32 bg-brand-surface relative z-10">
+    <section id="sobre-mi" class="py-20 lg:py-28 bg-brand-surface relative z-10">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">
-
-                <!-- Sticky Image Context -->
-                <div class="w-full lg:w-5/12 lg:relative">
-                    <div class="lg:sticky lg:top-32 reveal">
-                        <div class="aspect-square rounded-[2rem] overflow-hidden shadow-premium">
-                            <img src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&q=80&w=1000"
-                                alt="Consultoría Ejecutiva" class="w-full h-full object-cover">
-                        </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+                <div class="lg:col-span-5 reveal">
+                    <div class="aspect-[4/3] lg:aspect-square rounded-[2rem] overflow-hidden shadow-premium">
+                        <img src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&q=80&w=1000"
+                            alt="Consultoría Ejecutiva" class="w-full h-full object-cover">
                     </div>
                 </div>
 
-                <!-- Text Content -->
-                <div class="w-full lg:w-7/12 reveal">
-                    <div class="inline-flex items-center gap-2 mb-6">
+                <div class="lg:col-span-7 reveal">
+                    <div class="inline-flex items-center gap-2 mb-5">
                         <span class="w-8 h-px bg-brand-accent"></span>
-                        <h2 class="text-brand-accent text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase">Sobre
-                            el Director</h2>
+                        <h2 class="text-brand-accent text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase">Sobre mí</h2>
                     </div>
-
-                    <h3
-                        class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-primary mb-8 leading-tight">
-                        Construyendo espacios de confianza y alto desempeño.
+                    <h3 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-primary mb-6 leading-tight">
+                        Un enfoque sobrio, humano y estratégico.
                     </h3>
-
-                    <div class="prose prose-lg text-slate-600">
-                        <p class="mb-6">
-                            Soy Bernabé Carrasco, Director de Feed@Back. Mi propósito profesional ha estado enfocado por
-                            más de dos décadas en <strong>crear talento, potenciar el aprendizaje continuo y otorgar
-                                sentido humano</strong> a las dinámicas organizacionales e individuales.
-                        </p>
-                        <p class="mb-8">
-                            A diferencia de enfoques puramente motivacionales, mi metodología integra el rigor del
-                            <em>psicoanálisis clínico</em> con herramientas de vanguardia en <em>neurociencias y
-                                biología cultural</em>. Esto me permite intervenir en la raíz de los problemas
-                            corporativos: entendiendo cómo la mente del líder opera bajo presión y cómo el lenguaje
-                            configura la realidad de los equipos.
-                        </p>
-                    </div>
-
-                    <!-- Value Props Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 mt-10">
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                            <div
-                                class="w-10 h-10 bg-brand-accentLight rounded-full flex items-center justify-center text-brand-accent mb-4">
-                                <i class="fas fa-user-md text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-brand-primary mb-2">Rigor Clínico</h4>
-                            <p class="text-sm text-slate-500">Fundamentos psicológicos profundos para cambios
-                                sostenibles en el tiempo.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="bg-white p-5 rounded-2xl border border-slate-100">
+                            <p class="font-serif text-3xl font-bold text-brand-primary">20+</p>
+                            <p class="text-sm text-slate-500">experiencia</p>
                         </div>
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                            <div
-                                class="w-10 h-10 bg-brand-accentLight rounded-full flex items-center justify-center text-brand-accent mb-4">
-                                <i class="fas fa-chart-line text-lg"></i>
-                            </div>
-                            <h4 class="font-bold text-brand-primary mb-2">Visión Estratégica</h4>
-                            <p class="text-sm text-slate-500">Alineación del bienestar individual con los KPI's y metas
-                                de la organización.</p>
+                        <div class="bg-white p-5 rounded-2xl border border-slate-100">
+                            <p class="font-serif text-3xl font-bold text-brand-primary">3</p>
+                            <p class="text-sm text-slate-500">áreas</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-slate-100">
+                            <p class="font-serif text-3xl font-bold text-brand-primary">Latam</p>
+                            <p class="text-sm text-slate-500">online</p>
                         </div>
                     </div>
-
-                    <a href="#contacto"
-                        class="inline-flex items-center text-brand-primary font-bold text-lg group hover:text-brand-accent transition-colors tap-highlight-transparent">
-                        Conversemos sobre tu organización
-                        <span class="ml-2 transition-transform group-hover:translate-x-2">
-                            <i class="fas fa-arrow-right"></i>
-                        </span>
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICIOS (Bento Grid Style) -->
-    <section id="servicios" class="py-24 lg:py-32 bg-white">
+    <!-- SERVICIOS -->
+    <section id="servicios" class="py-20 lg:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+            <div class="text-center max-w-2xl mx-auto mb-14 reveal">
                 <div class="inline-flex items-center gap-2 mb-4 justify-center">
                     <span class="w-8 h-px bg-brand-accent"></span>
-                    <h2 class="text-brand-accent text-xs font-semibold tracking-[0.2em] uppercase">Metodología de
-                        Intervención</h2>
+                    <h2 class="text-brand-accent text-xs font-semibold tracking-[0.2em] uppercase">Servicios</h2>
                     <span class="w-8 h-px bg-brand-accent"></span>
                 </div>
-                <h3 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-primary mb-6">Soluciones
-                    Especializadas</h3>
-                <p class="text-slate-600 text-lg">Espacios diseñados para el desarrollo íntimo, la resolución de crisis
-                    y la escalabilidad organizacional estructural.</p>
+                <h3 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-primary">Tres líneas de trabajo.</h3>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 reveal">
-
-                <!-- Service Card 1 -->
-                <div
-                    class="group bg-brand-surfaceAlt rounded-[2rem] p-8 sm:p-10 transition-all duration-300 hover:bg-brand-primary hover:-translate-y-2 cursor-pointer flex flex-col h-full tap-highlight-transparent">
-                    <div
-                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-brand-primary mb-8 group-hover:text-brand-accent shadow-sm transition-colors">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 reveal">
+                <a href="#contacto"
+                    class="group bg-brand-surfaceAlt rounded-[2rem] p-8 transition-all duration-300 hover:bg-brand-primary hover:-translate-y-2 flex flex-col min-h-[18rem] tap-highlight-transparent">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-brand-primary mb-8 group-hover:text-brand-accent shadow-sm">
                         <i class="fas fa-brain text-2xl"></i>
                     </div>
-                    <h4
-                        class="text-2xl font-serif font-bold text-brand-primary mb-4 group-hover:text-white transition-colors">
-                        Psicoterapia Clínica</h4>
-                    <p class="text-slate-600 mb-8 flex-1 group-hover:text-slate-300 transition-colors">
-                        Espacio seguro de enfoque psicoanalítico para abordar el malestar emocional, la ansiedad y el
-                        rediseño profundo de tu bienestar psicológico y mental.
-                    </p>
-                    <div
-                        class="flex items-center text-brand-primary font-semibold group-hover:text-white transition-colors">
-                        <span class="text-sm uppercase tracking-wider">Solicitar hora</span>
-                        <i
-                            class="fas fa-arrow-right ml-3 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
-                    </div>
-                </div>
+                    <h4 class="text-2xl font-serif font-bold text-brand-primary mb-4 group-hover:text-white">Psicoterapia Clínica</h4>
+                    <p class="text-slate-600 flex-1 group-hover:text-slate-300">Escucha clínica y elaboración personal.</p>
+                    <span class="mt-8 text-sm font-semibold text-brand-accent uppercase tracking-wider group-hover:text-white">Solicitar hora</span>
+                </a>
 
-                <!-- Service Card 2 -->
-                <div
-                    class="group bg-brand-surfaceAlt rounded-[2rem] p-8 sm:p-10 transition-all duration-300 hover:bg-brand-primary hover:-translate-y-2 cursor-pointer flex flex-col h-full tap-highlight-transparent">
-                    <div
-                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-brand-primary mb-8 group-hover:text-brand-accent shadow-sm transition-colors">
-                        <i class="fas fa-compass text-2xl"></i>
-                    </div>
-                    <h4
-                        class="text-2xl font-serif font-bold text-brand-primary mb-4 group-hover:text-white transition-colors">
-                        Coaching Personal</h4>
-                    <p class="text-slate-600 mb-8 flex-1 group-hover:text-slate-300 transition-colors">
-                        Acompañamiento ontológico para destrabar creencias limitantes, definir metas vitales claras y
-                        tomar decisiones con consciencia plena.
-                    </p>
-                    <div
-                        class="flex items-center text-brand-primary font-semibold group-hover:text-white transition-colors">
-                        <span class="text-sm uppercase tracking-wider">Solicitar hora</span>
-                        <i
-                            class="fas fa-arrow-right ml-3 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
-                    </div>
-                </div>
-
-                <!-- Service Card 3 -->
-                <div
-                    class="group bg-brand-surfaceAlt rounded-[2rem] p-8 sm:p-10 transition-all duration-300 hover:bg-brand-primary hover:-translate-y-2 cursor-pointer flex flex-col h-full tap-highlight-transparent lg:row-span-2">
-                    <div
-                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-brand-primary mb-8 group-hover:text-brand-accent shadow-sm transition-colors">
+                <a href="#contacto"
+                    class="group bg-brand-surfaceAlt rounded-[2rem] p-8 transition-all duration-300 hover:bg-brand-primary hover:-translate-y-2 flex flex-col min-h-[18rem] tap-highlight-transparent">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-brand-primary mb-8 group-hover:text-brand-accent shadow-sm">
                         <i class="fas fa-user-tie text-2xl"></i>
                     </div>
-                    <h4
-                        class="text-2xl font-serif font-bold text-brand-primary mb-4 group-hover:text-white transition-colors">
-                        Coaching Ejecutivo</h4>
-                    <p class="text-slate-600 mb-8 flex-1 group-hover:text-slate-300 transition-colors">
-                        Desarrollo intensivo de habilidades directivas. Mejora tu toma de decisiones bajo presión,
-                        comunicación estratégica y gestión emocional en la alta dirección para inspirar a otros.
-                    </p>
-                    <div class="mt-auto hidden lg:block mb-8">
-                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=600"
-                            alt="Executive Coaching"
-                            class="w-full h-40 object-cover rounded-xl opacity-80 group-hover:opacity-100 transition-opacity">
-                    </div>
-                    <div
-                        class="flex items-center text-brand-primary font-semibold group-hover:text-white transition-colors">
-                        <span class="text-sm uppercase tracking-wider">Solicitar propuesta</span>
-                        <i
-                            class="fas fa-arrow-right ml-3 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
-                    </div>
-                </div>
+                    <h4 class="text-2xl font-serif font-bold text-brand-primary mb-4 group-hover:text-white">Coaching Ejecutivo</h4>
+                    <p class="text-slate-600 flex-1 group-hover:text-slate-300">Criterio, presión y comunicación.</p>
+                    <span class="mt-8 text-sm font-semibold text-brand-accent uppercase tracking-wider group-hover:text-white">Agendar diagnóstico</span>
+                </a>
 
-                <!-- Service Card 4 -->
-                <div
-                    class="group bg-brand-surfaceAlt rounded-[2rem] p-8 sm:p-10 transition-all duration-300 hover:bg-brand-primary hover:-translate-y-2 cursor-pointer flex flex-col h-full tap-highlight-transparent">
-                    <div
-                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-brand-primary mb-8 group-hover:text-brand-accent shadow-sm transition-colors">
+                <a href="#contacto"
+                    class="group bg-brand-surfaceAlt rounded-[2rem] p-8 transition-all duration-300 hover:bg-brand-primary hover:-translate-y-2 flex flex-col min-h-[18rem] tap-highlight-transparent">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-brand-primary mb-8 group-hover:text-brand-accent shadow-sm">
                         <i class="fas fa-users-cog text-2xl"></i>
                     </div>
-                    <h4
-                        class="text-2xl font-serif font-bold text-brand-primary mb-4 group-hover:text-white transition-colors">
-                        Equipos y Cambio</h4>
-                    <p class="text-slate-600 mb-8 flex-1 group-hover:text-slate-300 transition-colors">
-                        Intervención estructural para resolver conflictos, alinear propósitos y transformar grupos en
-                        ecosistemas proactivos durante transiciones corporativas.
-                    </p>
-                    <div
-                        class="flex items-center text-brand-primary font-semibold group-hover:text-white transition-colors">
-                        <span class="text-sm uppercase tracking-wider">Saber más</span>
-                        <i
-                            class="fas fa-arrow-right ml-3 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                    <h4 class="text-2xl font-serif font-bold text-brand-primary mb-4 group-hover:text-white">Equipos y Formación</h4>
+                    <p class="text-slate-600 flex-1 group-hover:text-slate-300">Confianza, liderazgo y buen trato.</p>
+                    <span class="mt-8 text-sm font-semibold text-brand-accent uppercase tracking-wider group-hover:text-white">Solicitar propuesta</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRAYECTORIA -->
+    <section id="trayectoria" class="py-20 lg:py-28 bg-brand-surface">
+        <div class="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8 reveal">
+            <div class="text-center mb-14">
+                <div class="inline-flex items-center gap-2 mb-4 justify-center">
+                    <span class="w-8 h-px bg-brand-accent"></span>
+                    <h2 class="text-brand-accent text-xs font-semibold tracking-[0.2em] uppercase">Trayectoria</h2>
+                    <span class="w-8 h-px bg-brand-accent"></span>
+                </div>
+                <h3 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-primary">Experiencia en acción.</h3>
+            </div>
+
+            <div class="relative flex flex-col gap-8 before:absolute before:inset-y-0 before:left-5 md:before:left-1/2 before:w-px before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+                <div class="relative flex items-center md:justify-start md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-brand-surface bg-brand-primary text-white shrink-0 md:absolute md:left-1/2 md:-translate-x-1/2 shadow-sm z-10">
+                        <i class="fas fa-building text-sm"></i>
+                    </div>
+                    <div class="ml-8 md:ml-0 md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                        <span class="text-xs font-bold text-brand-accent uppercase tracking-[0.18em] block mb-2">Corporativo</span>
+                        <h4 class="font-serif text-2xl font-bold text-brand-primary mb-2">Director Feed@Back / Saesa</h4>
                     </div>
                 </div>
 
-                <!-- Service Card 5 -->
-                <div
-                    class="group bg-brand-surfaceAlt rounded-[2rem] p-8 sm:p-10 transition-all duration-300 hover:bg-brand-primary hover:-translate-y-2 cursor-pointer flex flex-col h-full tap-highlight-transparent">
-                    <div
-                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-brand-primary mb-8 group-hover:text-brand-accent shadow-sm transition-colors">
-                        <i class="fas fa-chalkboard-teacher text-2xl"></i>
+                <div class="relative flex items-center md:justify-end md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-brand-surface bg-brand-accent text-white shrink-0 md:absolute md:left-1/2 md:-translate-x-1/2 shadow-sm z-10">
+                        <i class="fas fa-graduation-cap text-sm"></i>
                     </div>
-                    <h4
-                        class="text-2xl font-serif font-bold text-brand-primary mb-4 group-hover:text-white transition-colors">
-                        Formación</h4>
-                    <p class="text-slate-600 mb-8 flex-1 group-hover:text-slate-300 transition-colors">
-                        Programas de inmersión y capacitación basados en biología cultural para fomentar el buen trato y
-                        un liderazgo profundamente humano y efectivo.
-                    </p>
-                    <div
-                        class="flex items-center text-brand-primary font-semibold group-hover:text-white transition-colors">
-                        <span class="text-sm uppercase tracking-wider">Saber más</span>
-                        <i
-                            class="fas fa-arrow-right ml-3 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                    <div class="ml-8 md:ml-0 md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                        <span class="text-xs font-bold text-brand-accent uppercase tracking-[0.18em] block mb-2">Formación</span>
+                        <h4 class="font-serif text-2xl font-bold text-brand-primary mb-2">UdeC / Matríztica / ESEM</h4>
+                    </div>
+                </div>
+
+                <div class="relative flex items-center md:justify-start md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-brand-surface bg-slate-700 text-white shrink-0 md:absolute md:left-1/2 md:-translate-x-1/2 shadow-sm z-10">
+                        <i class="fas fa-hands-helping text-sm"></i>
+                    </div>
+                    <div class="ml-8 md:ml-0 md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                        <span class="text-xs font-bold text-brand-accent uppercase tracking-[0.18em] block mb-2">Intervención</span>
+                        <h4 class="font-serif text-2xl font-bold text-brand-primary mb-2">Clínica, liderazgo y equipos</h4>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BENEFICIOS (Dark Impact Section) -->
-    <section id="beneficios" class="py-24 lg:py-32 bg-brand-primary text-white relative overflow-hidden reveal">
-        <!-- Minimal geometric background -->
+    <!-- BENEFICIOS -->
+    <section id="beneficios" class="py-20 lg:py-28 bg-brand-primary text-white relative overflow-hidden reveal">
         <div class="absolute top-0 right-0 w-1/2 h-full bg-slate-800/20 transform skew-x-12 translate-x-1/4"></div>
-        <div class="absolute -bottom-32 -left-32 w-96 h-96 border-[40px] border-white/5 rounded-full"></div>
-
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-brand-accentLight font-semibold tracking-[0.2em] uppercase text-xs mb-4">El Valor
-                        del Proceso</h2>
-                    <h3 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 leading-tight">Resultados
-                        tangibles para mentes complejas.</h3>
-                    <p class="text-slate-300 text-lg mb-12">
-                        El trabajo terapéutico y de coaching no es magia, es metodología estructurada. Estos son los
-                        retornos de inversión psicológicos y operativos que experimentan mis clientes:
-                    </p>
-
-                    <ul class="space-y-8">
-                        <li class="flex items-start gap-5">
-                            <div
-                                class="w-12 h-12 rounded-full border border-brand-accent/50 flex items-center justify-center flex-shrink-0 text-brand-accent bg-white/5">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-white mb-2">Nitidez Estratégica</h4>
-                                <p class="text-slate-400">Reduce el ruido mental y la carga alostática (estrés crónico)
-                                    para tomar decisiones asertivas bajo presión.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-5">
-                            <div
-                                class="w-12 h-12 rounded-full border border-brand-accent/50 flex items-center justify-center flex-shrink-0 text-brand-accent bg-white/5">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-white mb-2">Liderazgo Biocéntrico</h4>
-                                <p class="text-slate-400">Desarrolla la capacidad de generar confianza genuina,
-                                    transformando grupos reactivos en ecosistemas resilientes.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-5">
-                            <div
-                                class="w-12 h-12 rounded-full border border-brand-accent/50 flex items-center justify-center flex-shrink-0 text-brand-accent bg-white/5">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-white mb-2">Resolución de Fricciones</h4>
-                                <p class="text-slate-400">Herramientas conversacionales para desarticular crisis de
-                                    equipos y mejorar el clima de convivencia laboral.</p>
-                            </div>
-                        </li>
-                    </ul>
+                    <h2 class="text-brand-accentLight font-semibold tracking-[0.2em] uppercase text-xs mb-4">Resultados</h2>
+                    <h3 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">Menos ruido. Más claridad.</h3>
                 </div>
 
-                <div class="lg:pl-10">
-                    <div class="bg-white rounded-[2rem] p-10 sm:p-12 text-brand-primary shadow-2xl relative">
-                        <!-- Decorative Quote mark -->
-                        <div
-                            class="absolute top-8 right-10 text-6xl text-slate-100 font-serif leading-none select-none">
-                            "</div>
-
-                        <h4 class="font-serif text-2xl sm:text-3xl font-bold mb-6 relative z-10">¿Listo para el
-                            siguiente paso?</h4>
-                        <p class="text-slate-600 text-lg mb-10 relative z-10">
-                            Ya sea para desbloquear tu potencial personal o escalar la cultura de tu organización, la
-                            primera conversación es fundamental y estrictamente confidencial.
-                        </p>
-
-                        <a href="https://wa.me/56974983850" target="_blank"
-                            class="w-full flex justify-center items-center px-6 py-5 bg-brand-whatsapp hover:bg-[#0ea674] text-white text-lg font-bold rounded-xl transition-all shadow-lg shadow-emerald-500/20 tap-highlight-transparent group">
-                            <i class="fab fa-whatsapp text-2xl mr-3 group-hover:scale-110 transition-transform"></i>
-                            Hablar por WhatsApp
-                        </a>
-                        <p class="text-center text-sm text-slate-500 mt-5 font-medium"><i
-                                class="fas fa-lock mr-2 text-slate-300"></i>Contacto Directo. Privacidad Absoluta.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4">
+                    <div class="bg-white/10 border border-white/10 rounded-2xl p-6">
+                        <h4 class="font-bold text-white mb-2">Claridad</h4>
+                    </div>
+                    <div class="bg-white/10 border border-white/10 rounded-2xl p-6">
+                        <h4 class="font-bold text-white mb-2">Confianza</h4>
+                    </div>
+                    <div class="bg-white/10 border border-white/10 rounded-2xl p-6">
+                        <h4 class="font-bold text-white mb-2">Acción</h4>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- ACTUALIDAD (Clean Cards) -->
-    <section id="actualidad" class="py-24 lg:py-32 bg-brand-surfaceAlt reveal">
+    <!-- ACTUALIDAD -->
+    <section id="actualidad" class="py-20 lg:py-28 bg-brand-surfaceAlt reveal">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                 <div class="max-w-2xl">
                     <div class="inline-flex items-center gap-2 mb-4">
                         <span class="w-8 h-px bg-brand-accent"></span>
-                        <h2 class="text-brand-accent text-xs font-semibold tracking-[0.2em] uppercase">Ecosistema de
-                            Conocimiento</h2>
+                        <h2 class="text-brand-accent text-xs font-semibold tracking-[0.2em] uppercase">Recursos</h2>
                     </div>
-                    <h3 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-primary">Formación &
-                        Reflexiones</h3>
+                    <h3 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-primary">Recursos.</h3>
                 </div>
-                <a href="#contacto"
-                    class="inline-flex items-center text-brand-primary font-bold hover:text-brand-accent transition-colors">
-                    Ver todos los artículos <i class="fas fa-arrow-right ml-2"></i>
-                </a>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Blog Card 1 -->
-                <a href="cursos.html"
-                    class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-premium transition-all duration-500 tap-highlight-transparent flex flex-col">
-                    <div class="aspect-[4/3] overflow-hidden relative">
-                        <img src="4373b50f-f93c-4e8b-8ee6-6c0aad9548a1.jpg" alt="Capacitación"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute top-4 left-4 bg-white/90 backdrop-blur text-brand-primary text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider">
-                            Programas</div>
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <h4
-                            class="font-serif text-2xl font-bold text-brand-primary mb-3 group-hover:text-brand-accent transition-colors">
-                            Capacitación y Formación Directiva</h4>
-                        <p class="text-slate-600 mb-6 flex-1">Experiencias de aprendizaje real en habilidades
-                            comunicacionales, contención en crisis y biología de la confianza para equipos.</p>
-                        <span class="text-sm font-semibold text-brand-accent uppercase tracking-wider">Descubrir cursos
-                            &rarr;</span>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="cursos.html" class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-premium transition-all duration-500 tap-highlight-transparent">
+                    <img src="4373b50f-f93c-4e8b-8ee6-6c0aad9548a1.jpg" alt="Capacitación" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="p-7">
+                        <span class="text-xs font-bold text-brand-accent uppercase tracking-wider">Programas</span>
+                        <h4 class="font-serif text-2xl font-bold text-brand-primary mt-2">Cursos y formación</h4>
                     </div>
                 </a>
 
-                <!-- Blog Card 2 -->
-                <a href="noticias.html"
-                    class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-premium transition-all duration-500 tap-highlight-transparent flex flex-col">
-                    <div class="aspect-[4/3] overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?q=80&w=800&auto=format&fit=crop"
-                            alt="Noticias"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute top-4 left-4 bg-white/90 backdrop-blur text-brand-primary text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider">
-                            Artículos</div>
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <h4
-                            class="font-serif text-2xl font-bold text-brand-primary mb-3 group-hover:text-brand-accent transition-colors">
-                            El impacto del Arte en el Liderazgo</h4>
-                        <p class="text-slate-600 mb-6 flex-1">Reflexiones sobre cómo la apreciación artística reduce el
-                            estrés corporativo y estimula el pensamiento divergente e innovador.</p>
-                        <span class="text-sm font-semibold text-brand-accent uppercase tracking-wider">Leer artículo
-                            &rarr;</span>
+                <a href="noticias.html" class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-premium transition-all duration-500 tap-highlight-transparent">
+                    <img src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?q=80&w=800&auto=format&fit=crop" alt="Noticias" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="p-7">
+                        <span class="text-xs font-bold text-brand-accent uppercase tracking-wider">Noticias</span>
+                        <h4 class="font-serif text-2xl font-bold text-brand-primary mt-2">Actualidad del sector</h4>
                     </div>
                 </a>
 
-                <!-- Blog Card 3 -->
-                <a href="interes.html"
-                    class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-premium transition-all duration-500 tap-highlight-transparent flex flex-col">
-                    <div class="aspect-[4/3] overflow-hidden relative">
-                        <img src="a4819310-7064-4f9e-b4b6-841e51ad5219.jpg" alt="Psicoanálisis"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute top-4 left-4 bg-white/90 backdrop-blur text-brand-primary text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider">
-                            Galería</div>
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <h4
-                            class="font-serif text-2xl font-bold text-brand-primary mb-3 group-hover:text-brand-accent transition-colors">
-                            Clínica, Huellas Mnémicas y Pintura</h4>
-                        <p class="text-slate-600 mb-6 flex-1">Explora una biblioteca visual que entrelaza los
-                            fundamentos del psicoanálisis con la expresión pictórica como ventana al inconsciente.</p>
-                        <span class="text-sm font-semibold text-brand-accent uppercase tracking-wider">Ver galería
-                            &rarr;</span>
+                <a href="interes.html" class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-premium transition-all duration-500 tap-highlight-transparent">
+                    <img src="a4819310-7064-4f9e-b4b6-841e51ad5219.jpg" alt="Psicoanálisis" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="p-7">
+                        <span class="text-xs font-bold text-brand-accent uppercase tracking-wider">Galería</span>
+                        <h4 class="font-serif text-2xl font-bold text-brand-primary mt-2">Arte y psicoanálisis</h4>
                     </div>
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ (Minimalist Elegance) -->
-    <section class="py-24 bg-white reveal">
-        <div class="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h3 class="font-serif text-3xl sm:text-4xl font-bold text-brand-primary mb-4">Preguntas Frecuentes</h3>
-                <p class="text-slate-600 text-lg">Claridad antes de dar el primer paso.</p>
-            </div>
-
-            <div class="space-y-2">
-                <details class="group border-b border-slate-200">
-                    <summary
-                        class="py-6 cursor-pointer flex justify-between items-center outline-none tap-highlight-transparent">
-                        <span
-                            class="font-bold text-lg sm:text-xl text-brand-primary pr-6 group-hover:text-brand-accent transition-colors">¿Cuál
-                            es la diferencia entre Psicoterapia y Coaching Ejecutivo?</span>
-                        <span class="text-brand-accent transform group-open:rotate-180 transition-transform">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                    </summary>
-                    <div class="pb-6 text-slate-600 text-lg leading-relaxed">
-                        La psicoterapia se enfoca en sanar heridas, patrones profundos de comportamiento y salud mental
-                        clínica. El coaching ejecutivo se orienta a objetivos presentes y futuros, destrabando
-                        habilidades de liderazgo, comunicación estratégica y resolución de conflictos en el entorno
-                        laboral.
-                    </div>
-                </details>
-
-                <details class="group border-b border-slate-200">
-                    <summary
-                        class="py-6 cursor-pointer flex justify-between items-center outline-none tap-highlight-transparent">
-                        <span
-                            class="font-bold text-lg sm:text-xl text-brand-primary pr-6 group-hover:text-brand-accent transition-colors">¿Cómo
-                            funciona el proceso de consultoría para empresas?</span>
-                        <span class="text-brand-accent transform group-open:rotate-180 transition-transform">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                    </summary>
-                    <div class="pb-6 text-slate-600 text-lg leading-relaxed">
-                        Iniciamos con un diagnóstico situacional (entrevistas y observación) para mapear la cultura y
-                        los puntos de fricción reales. Posteriormente, presento un diseño de intervención a la medida
-                        que puede incluir coaching individual a la plana mayor, talleres formativos o asesoría en
-                        gestión del cambio.
-                    </div>
-                </details>
-
-                <details class="group border-b border-slate-200">
-                    <summary
-                        class="py-6 cursor-pointer flex justify-between items-center outline-none tap-highlight-transparent">
-                        <span
-                            class="font-bold text-lg sm:text-xl text-brand-primary pr-6 group-hover:text-brand-accent transition-colors">¿Las
-                            sesiones son estrictamente confidenciales?</span>
-                        <span class="text-brand-accent transform group-open:rotate-180 transition-transform">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                    </summary>
-                    <div class="pb-6 text-slate-600 text-lg leading-relaxed">
-                        Absolutamente. La efectividad de mi trabajo radica en la confianza ("Biología de la Confianza").
-                        Tanto en el diván clínico como en los procesos de consultoría corporativa, el secreto
-                        profesional y la confidencialidad de los relatos son intransables.
-                    </div>
-                </details>
             </div>
         </div>
     </section>
@@ -782,18 +528,13 @@
 
                 <!-- Contact Info -->
                 <div>
-                    <h2 class="font-serif text-4xl sm:text-5xl font-bold mb-6 leading-tight">Iniciemos
-                        la<br>conversación.</h2>
-                    <p class="text-slate-400 text-lg mb-12 max-w-md">
-                        Agenda una primera sesión diagnóstica o solicita una propuesta formal para intervenir en tu
-                        organización.
-                    </p>
+                    <h2 class="font-serif text-4xl sm:text-5xl font-bold mb-6 leading-tight">Conversemos.</h2>
 
                     <div class="space-y-8">
                         <div class="flex items-start gap-4">
                             <i class="fas fa-map-marker-alt text-brand-accent text-xl mt-1"></i>
                             <div>
-                                <p class="font-bold text-lg">Ubicación & Modalidad</p>
+                                <p class="font-bold text-lg">Modalidad</p>
                                 <p class="text-slate-400">San Pedro de la Paz, Concepción.<br>Sesiones presenciales y
                                     Online (Latam).</p>
                             </div>
@@ -801,7 +542,7 @@
                         <div class="flex items-start gap-4">
                             <i class="fas fa-envelope text-brand-accent text-xl mt-1"></i>
                             <div>
-                                <p class="font-bold text-lg">Email Directo</p>
+                                <p class="font-bold text-lg">Email</p>
                                 <a href="mailto:contacto@bernabe.cl"
                                     class="text-slate-400 hover:text-white transition-colors">contacto@bernabe.cl</a>
                             </div>
@@ -809,7 +550,7 @@
                         <div class="flex items-start gap-4">
                             <i class="fas fa-phone-alt text-brand-accent text-xl mt-1"></i>
                             <div>
-                                <p class="font-bold text-lg">Atención Telefónica / WA</p>
+                                <p class="font-bold text-lg">WhatsApp</p>
                                 <a href="tel:+56974983850" class="text-slate-400 hover:text-white transition-colors">+56
                                     9 7498 3850</a>
                             </div>
@@ -823,24 +564,23 @@
                         onsubmit="event.preventDefault(); alert('Mensaje enviado. En producción, conectar a un backend.');"
                         class="space-y-6">
                         <div>
-                            <label class="block text-sm font-medium text-slate-300 mb-2">Nombre completo</label>
+                            <label class="sr-only">Nombre completo</label>
                             <input type="text"
                                 class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors"
                                 placeholder="Ej. Carlos Martínez" required>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-slate-300 mb-2">Correo corporativo /
-                                personal</label>
+                            <label class="sr-only">Correo</label>
                             <input type="email"
                                 class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors"
                                 placeholder="tu@email.com" required>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-slate-300 mb-2">Área de interés</label>
+                            <label class="sr-only">Área de interés</label>
                             <select
                                 class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors appearance-none"
                                 required>
-                                <option value="" disabled selected>Selecciona una opción...</option>
+                                <option value="" disabled selected>Área de interés</option>
                                 <option value="coaching_ejecutivo">Coaching Ejecutivo (Liderazgo)</option>
                                 <option value="consultoria">Consultoría a Empresas / Equipos</option>
                                 <option value="psicoterapia">Psicoterapia Clínica</option>
@@ -848,14 +588,14 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-slate-300 mb-2">Mensaje breve</label>
+                            <label class="sr-only">Mensaje breve</label>
                             <textarea rows="4"
                                 class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors resize-none"
                                 placeholder="¿En qué puedo ayudarte hoy?" required></textarea>
                         </div>
                         <button type="submit"
                             class="w-full bg-brand-accent hover:bg-[#9c7e46] text-white font-bold text-lg py-4 rounded-xl transition-colors tap-highlight-transparent">
-                            Enviar Solicitud
+                            Enviar
                         </button>
                     </form>
                 </div>
@@ -963,6 +703,26 @@
             observer.observe(el);
         });
     </script>
+
+    <!-- Bottom Navigation Bar (Mobile App Style) -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 z-[100] px-2 py-2 md:hidden flex justify-around items-center shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+        <a href="cursos.html" class="flex flex-col items-center gap-1 p-2 text-slate-500 hover:text-brand-primary transition-colors">
+            <i class="fas fa-graduation-cap text-xl"></i>
+            <span class="text-[10px] font-semibold uppercase tracking-wider">Formación</span>
+        </a>
+        <a href="noticias.html" class="flex flex-col items-center gap-1 p-2 text-slate-500 hover:text-brand-primary transition-colors">
+            <i class="fas fa-newspaper text-xl"></i>
+            <span class="text-[10px] font-semibold uppercase tracking-wider">Actualidad</span>
+        </a>
+        <a href="interes.html" class="flex flex-col items-center gap-1 p-2 text-slate-500 hover:text-brand-primary transition-colors">
+            <i class="fas fa-book-open text-xl"></i>
+            <span class="text-[10px] font-semibold uppercase tracking-wider">Interés</span>
+        </a>
+        <a href="#contacto" class="flex flex-col items-center gap-1 p-2 text-slate-500 hover:text-brand-primary transition-colors">
+            <i class="fas fa-envelope text-xl"></i>
+            <span class="text-[10px] font-semibold uppercase tracking-wider">Contacto</span>
+        </a>
+    </nav>
 </body>
 
 </html>
