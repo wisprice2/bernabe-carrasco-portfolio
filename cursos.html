@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos y Formación | Bernabé Carrasco</title>
+    <meta name="description" content="Cursos y programas de formación en liderazgo, neurociencias y biología cultural por Bernabé Carrasco.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], },
+                    colors: {
+                        brand: {
+                            dark: '#212529', primary: '#b4975a', light: '#f8f9fa', accent: '#10b981',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-brand-light antialiased selection:bg-brand-primary selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <img src="image-removebg-preview (3).png" alt="Feed@Back Logo" class="h-10 w-auto object-contain">
+                    <div>
+                        <span class="font-bold text-xl text-brand-dark tracking-tight block leading-none">Feed@Back</span>
+                        <span class="text-xs text-slate-500 tracking-wide font-medium">BERNABÉ CARRASCO</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html#sobre-mi" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition">Sobre mí</a>
+                    <a href="index.html#servicios" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition">Servicios</a>
+                    <a href="index.html#actualidad" class="text-sm font-medium text-brand-primary transition">Actualidad</a>
+                    <a href="index.html#contacto" class="text-sm font-medium text-brand-primary hover:text-brand-accent transition">Agendar sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-32 pb-16 bg-white border-b border-slate-100 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-[-20%] left-[-10%] w-96 h-96 bg-yellow-50 rounded-full blur-3xl opacity-70"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-yellow-50 text-brand-primary text-sm font-semibold tracking-wide mb-4 border border-yellow-100">Formación Continua</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-brand-dark tracking-tight mb-4">Cursos y Programas</h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">Experiencias de aprendizaje profundo diseñadas para transformar líderes, cohesionar equipos y rediseñar la cultura organizacional.</p>
+        </div>
+    </section>
+
+    <!-- Cursos Content -->
+    <section class="py-16 bg-slate-50 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+            <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-shrink-0 w-16 h-16 bg-yellow-50 text-brand-primary rounded-full flex items-center justify-center text-3xl">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3">Enfoque Metodológico</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Mi propuesta de capacitación y jornadas experienciales se fundamenta en el <strong>aprendizaje desde la aceptación del otro como legítimo otro</strong>. El objetivo no es solo transmitir información, sino <em>construir equipos, crear lazos sólidos, aprender a escuchar, preguntarnos y reflexionar en el hacer</em>. Las intervenciones que realizo buscan dotar a las organizaciones de herramientas de liderazgo, resolución de conflictos e intervención en crisis para navegar la incertidumbre promoviendo siempre una cultura del buen trato.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-brand-dark mb-10 border-b border-slate-200 pb-4">Experiencias y Programas Recientes</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Experiencia 1 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="relative h-64">
+                        <img src="cursos/1755653279527.jpg" alt="Curso de Humanización" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Curso de Humanización</h3>
+                        <p class="text-slate-600 text-sm flex-1">DAS San Pedro de La Paz, Región del Biobío. Programa dictado a través de OTEC UdeC.</p>
+                    </div>
+                </article>
+
+                <!-- Experiencia 2 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="relative h-64">
+                        <img src="cursos/1755374420791.jpg" alt="Posgrado Clínica Psicoanalítica" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Posgrado en Clínica Psicoanalítica</h3>
+                        <p class="text-slate-600 text-sm flex-1">Etapa cumplida en la Asociación Latinoamericana de Estudios Freudianos de Buenos Aires, culminando la parte final del posgrado junto a colegas de toda Latinoamérica.</p>
+                    </div>
+                </article>
+
+                <!-- Experiencia 3 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="relative h-64">
+                        <img src="cursos/1726334839493.jpg" alt="Jornada SAR Emergencias" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Jornada SAR Emergencias</h3>
+                        <p class="text-slate-600 text-sm flex-1">Campos Clínicos en Chiguayante, Biobío. Enfoque en intervención en crisis ante acontecimientos de violencia.</p>
+                    </div>
+                </article>
+
+                <!-- Experiencia 4 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="relative h-64">
+                        <img src="cursos/1725836431820.jpg" alt="Jornada Trabajo en Equipo Saesa" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Trabajo en Equipo (Grupo Saesa)</h3>
+                        <p class="text-slate-600 text-sm flex-1">Jornada diseñada para los profesionales de Administración de Infraestructura. Iniciativa del Área de Desarrollo de Talento.</p>
+                    </div>
+                </article>
+
+                <!-- Experiencia 5 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="relative h-64">
+                        <img src="cursos/1725442188796.jpg" alt="Intervención en Salud Mental" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Salud Mental en Crisis</h3>
+                        <p class="text-slate-600 text-sm flex-1">Intervenciones para instituciones y su personal que atraviesan momentos de alta complejidad producto de la crisis social actual.</p>
+                    </div>
+                </article>
+
+                <!-- Experiencia 6 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="relative h-64">
+                        <img src="cursos/1723319304566.jpg" alt="Taller Emociones Cesfam" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Autocuidado y Emociones</h3>
+                        <p class="text-slate-600 text-sm flex-1">Jornada experiencial y taller práctico enfocado en el manejo de emociones para el equipo del Cesfam Tomé.</p>
+                    </div>
+                </article>
+
+                <!-- Experiencia 7 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="relative h-64">
+                        <img src="cursos/1720821784220.jpg" alt="Experiencias equipos de salud" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">El Valor del Buen Trato</h3>
+                        <p class="text-slate-600 text-sm flex-1">Abordando las experiencias reales de los equipos de salud: cómo trabajar manteniendo el enfoque y el cuidado humano en tiempos de incertidumbre.</p>
+                    </div>
+                </article>
+
+                <!-- Experiencia 8 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="relative h-64">
+                        <img src="cursos/1717608221607.jpg" alt="Resolución de Conflictos" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Resolución de Conflictos</h3>
+                        <p class="text-slate-600 text-sm flex-1">Capacitación en salud pública para el Cesfam San Pedro. Desarrollado junto a la unidad de Campos Clínicos UdeC.</p>
+                    </div>
+                </article>
+
+                <!-- Experiencia 9 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="relative h-64">
+                        <img src="cursos/1715737419290.jpg" alt="Liderazgo Trabajo en Equipo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Liderazgo Efectivo</h3>
+                        <p class="text-slate-600 text-sm flex-1">Herramientas de liderazgo enfocadas en el trabajo cohesionado en equipo. Realizado para el Cesfam San Pedro de la Paz, UdeC Campos Clínicos.</p>
+                    </div>
+                </article>
+
+                <!-- Experiencia 10 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="relative h-64">
+                        <img src="cursos/1713211292690.jpg" alt="Capacitación DAS Biobío" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Capacitación Integral</h3>
+                        <p class="text-slate-600 text-sm flex-1">Taller intensivo en "Trabajo en Equipo" para DAS Biobío UdeC y Cesfam Hualpén (Abril 2024), centrado en la construcción de lazos sólidos.</p>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="index.html" class="inline-flex items-center text-brand-primary font-medium hover:underline">
+                    <i class="fas fa-arrow-left mr-2"></i> Volver a la página principal
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="image-removebg-preview (3).png" alt="Feed@Back Logo" class="h-8 w-auto object-contain">
+                    <span class="font-bold text-white tracking-tight">Feed@Back EIRL</span>
+                </div>
+                <p class="text-sm text-center md:text-left">&copy; 2024 Bernabé Carrasco Sánchez. Todos los derechos reservados.</p>
+                <div class="flex space-x-4">
+                    <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/56974983850" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

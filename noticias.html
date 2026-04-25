@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias y Novedades | Bernabé Carrasco</title>
+    <meta name="description" content="Noticias, eventos y actualizaciones del sector por Bernabé Carrasco.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], },
+                    colors: {
+                        brand: {
+                            dark: '#212529', primary: '#b4975a', light: '#f8f9fa', accent: '#10b981',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-brand-light antialiased selection:bg-brand-primary selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <img src="image-removebg-preview (3).png" alt="Feed@Back Logo" class="h-10 w-auto object-contain">
+                    <div>
+                        <span class="font-bold text-xl text-brand-dark tracking-tight block leading-none">Feed@Back</span>
+                        <span class="text-xs text-slate-500 tracking-wide font-medium">BERNABÉ CARRASCO</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html#sobre-mi" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition">Sobre mí</a>
+                    <a href="index.html#servicios" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition">Servicios</a>
+                    <a href="index.html#actualidad" class="text-sm font-medium text-brand-primary transition">Actualidad</a>
+                    <a href="index.html#contacto" class="text-sm font-medium text-brand-primary hover:text-brand-accent transition">Agendar sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-32 pb-16 bg-white border-b border-slate-100 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-[-20%] right-[-10%] w-96 h-96 bg-emerald-50 rounded-full blur-3xl opacity-70"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-50 text-emerald-600 text-sm font-semibold tracking-wide mb-4 border border-emerald-100">Novedades</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-brand-dark tracking-tight mb-4">Noticias del Sector</h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">Mantente al tanto de las últimas tendencias, investigaciones en neurociencias y mis participaciones en eventos corporativos.</p>
+        </div>
+    </section>
+
+    <!-- Noticias Content -->
+    <section class="py-16 bg-slate-50 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-brand-dark mb-10 border-b border-slate-200 pb-4">Últimas Actualizaciones y Análisis</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Noticia 1: Arte y Pintura -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?q=80&w=800&auto=format&fit=crop" alt="Museo de Arte Pintura" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center text-xs text-slate-400 mb-3">
+                            <span><i class="far fa-calendar-alt mr-1"></i> Actualidad</span>
+                            <span class="mx-2">&bull;</span>
+                            <span class="text-emerald-500 font-semibold">Arte y Psicología</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">El Arte y la Pintura: Ventanas al Inconsciente en el Liderazgo</h3>
+                        <p class="text-slate-600 text-sm mb-4 flex-1">Una reflexión profunda sobre cómo la apreciación pictórica y las visitas a museos fomentan el pensamiento divergente, reducen la carga alostática y permiten a los líderes corporativos reconectar con su creatividad esencial.</p>
+                        <a href="index.html#contacto" class="inline-flex items-center text-brand-primary font-medium text-sm hover:text-brand-accent transition">
+                            Leer ensayo completo <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Noticia 2: Burnout -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Burnout" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center text-xs text-slate-400 mb-3">
+                            <span><i class="far fa-calendar-alt mr-1"></i> Salud Ocupacional</span>
+                            <span class="mx-2">&bull;</span>
+                            <span class="text-emerald-500 font-semibold">Tendencias</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">El Síndrome de Burnout en los Equipos de Salud y Servicios</h3>
+                        <p class="text-slate-600 text-sm mb-4 flex-1">Cifras recientes evidencian un alza crítica en las licencias por salud mental. El desafío actual no es solo la recuperación, sino el diseño de espacios de trabajo contenedores.</p>
+                        <a href="index.html#contacto" class="inline-flex items-center text-brand-primary font-medium text-sm hover:text-brand-accent transition">
+                            Solicitar intervención en crisis <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Noticia 3: Neurociencias -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Neurociencias" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center text-xs text-slate-400 mb-3">
+                            <span><i class="far fa-calendar-alt mr-1"></i> Investigación</span>
+                            <span class="mx-2">&bull;</span>
+                            <span class="text-emerald-500 font-semibold">Neurociencias</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Neurociencias aplicadas a la Toma de Decisiones Estratégicas</h3>
+                        <p class="text-slate-600 text-sm mb-4 flex-1">Cómo el estrés prolongado altera la corteza prefrontal de los directivos y qué intervenciones basadas en neurociencias corporativas están marcando la pauta.</p>
+                        <a href="index.html#contacto" class="inline-flex items-center text-brand-primary font-medium text-sm hover:text-brand-accent transition">
+                            Ver programas ejecutivos <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Noticia 4: Psicoterapia Evento -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Congreso" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center text-xs text-slate-400 mb-3">
+                            <span><i class="far fa-calendar-alt mr-1"></i> Hitos Profesionales</span>
+                            <span class="mx-2">&bull;</span>
+                            <span class="text-emerald-500 font-semibold">Eventos</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Nuevas Perspectivas en la Clínica Psicoanalítica</h3>
+                        <p class="text-slate-600 text-sm mb-4 flex-1">Reflexiones tras la culminación del posgrado en la Asociación Latinoamericana de Estudios Freudianos, integrando miradas continentales sobre el malestar contemporáneo.</p>
+                        <a href="index.html#contacto" class="inline-flex items-center text-brand-primary font-medium text-sm hover:text-brand-accent transition">
+                            Conocer más sobre mi enfoque <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                 <!-- Noticia 5: Equipos Híbridos -->
+                 <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Equipos" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center text-xs text-slate-400 mb-3">
+                            <span><i class="far fa-calendar-alt mr-1"></i> Desarrollo Organizacional</span>
+                            <span class="mx-2">&bull;</span>
+                            <span class="text-emerald-500 font-semibold">Liderazgo</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Construcción de Lazos Sólidos en Equipos Fragmentados</h3>
+                        <p class="text-slate-600 text-sm mb-4 flex-1">Estrategias prácticas para líderes que necesitan alinear a sus profesionales en contextos de alta rotación institucional y cambios organizacionales bruscos.</p>
+                        <a href="index.html#contacto" class="inline-flex items-center text-brand-primary font-medium text-sm hover:text-brand-accent transition">
+                            Agendar capacitación <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="index.html" class="inline-flex items-center text-brand-primary font-medium hover:underline">
+                    <i class="fas fa-arrow-left mr-2"></i> Volver a la página principal
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="image-removebg-preview (3).png" alt="Feed@Back Logo" class="h-8 w-auto object-contain">
+                    <span class="font-bold text-white tracking-tight">Feed@Back EIRL</span>
+                </div>
+                <p class="text-sm text-center md:text-left">&copy; 2024 Bernabé Carrasco Sánchez. Todos los derechos reservados.</p>
+                <div class="flex space-x-4">
+                    <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/56974983850" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

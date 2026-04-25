@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bernabé Carrasco | Psicoterapeuta & Executive Coach</title>
+    <meta name="description"
+        content="Acompañamiento psicológico y coaching para personas, líderes y organizaciones por Bernabé Carrasco Sánchez. Más de 20 años de experiencia.">
+
+    <!-- Google Fonts: Playfair Display (Elegancia/Autoridad) e Inter (Legibilidad moderna) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome para Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            ink: '#0f1115', // Deep elegant black
+                            paper: '#ffffff', // Background
+                            surface: '#f8f9fa', // Light gray background for sections
+                            surfaceAlt: '#f1f3f5', // Slightly darker gray
+                            primary: '#212529', // Charcoal (main identity)
+                            accent: '#b4975a', // Elegant Gold (CTAs, links)
+                            accentLight: '#fdfbf7', // Light gold for backgrounds
+                            whatsapp: '#10b981', // WhatsApp Green
+                        }
+                    },
+                    boxShadow: {
+                        'premium': '0 10px 40px -10px rgba(15, 23, 42, 0.08)',
+                        'premium-hover': '0 20px 40px -10px rgba(15, 23, 42, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #334155;
+            /* slate-700 */
+        }
+
+        /* Navbar transitions */
+        .navbar-scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid #f1f5f9;
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
+        }
+
+        /* Custom minimal accordion */
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* Mobile specific enhancements */
+        @media (max-width: 768px) {
+            .mobile-menu-active {
+                overflow: hidden;
+            }
+
+            .mobile-overlay {
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
+            }
+
+            .tap-highlight-transparent {
+                -webkit-tap-highlight-color: transparent;
+            }
+        }
+
+        /* Subtle patterns */
+        .pattern-dots {
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* Smooth reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased selection:bg-brand-accent selection:text-white relative">
+
+    <!-- Navbar (Clean & Minimalist) -->
+    <nav class="fixed w-full z-50 transition-all duration-500 pt-6 pb-6 bg-transparent" id="navbar">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer tap-highlight-transparent"
+                    onclick="window.scrollTo(0,0)">
+                    <img src="image-removebg-preview (3).png" alt="Feed@Back Logo" class="h-10 w-auto object-contain">
+                    <div class="flex flex-col">
+                        <span
+                            class="font-serif font-bold text-xl text-brand-primary tracking-tight leading-none mb-1">Feed@Back</span>
+                        <span class="text-[9px] text-slate-500 tracking-[0.25em] font-semibold uppercase">Bernabé
+                            Carrasco</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-10 items-center">
+                    <a href="#sobre-mi"
+                        class="text-sm font-medium text-slate-600 hover:text-brand-accent transition-colors relative group">
+                        Sobre mí
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-accent transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#servicios"
+                        class="text-sm font-medium text-slate-600 hover:text-brand-accent transition-colors relative group">
+                        Servicios
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-accent transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#beneficios"
+                        class="text-sm font-medium text-slate-600 hover:text-brand-accent transition-colors relative group">
+                        Beneficios
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-accent transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#actualidad"
+                        class="text-sm font-medium text-slate-600 hover:text-brand-accent transition-colors relative group">
+                        Actualidad
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-accent transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#contacto"
+                        class="text-sm font-semibold text-white bg-brand-primary hover:bg-slate-800 px-6 py-2.5 rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Agendar sesión
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn"
+                        class="text-brand-primary focus:outline-none p-2 tap-highlight-transparent z-50 relative">
+                        <div class="w-6 flex flex-col gap-1.5 items-end">
+                            <span class="w-full h-0.5 bg-current rounded-full transition-all duration-300 origin-right"
+                                id="line1"></span>
+                            <span class="w-full h-0.5 bg-current rounded-full transition-all duration-300"
+                                id="line2"></span>
+                            <span class="w-full h-0.5 bg-current rounded-full transition-all duration-300 origin-right"
+                                id="line3"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Fullscreen Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 mobile-overlay z-40 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden flex flex-col justify-center px-8">
+            <div class="space-y-6 text-center mt-10">
+                <a href="#sobre-mi"
+                    class="mobile-link block text-2xl font-serif font-medium text-brand-primary tap-highlight-transparent">Sobre
+                    mí</a>
+                <a href="#servicios"
+                    class="mobile-link block text-2xl font-serif font-medium text-brand-primary tap-highlight-transparent">Servicios</a>
+                <a href="#beneficios"
+                    class="mobile-link block text-2xl font-serif font-medium text-brand-primary tap-highlight-transparent">Beneficios</a>
+                <a href="#actualidad"
+                    class="mobile-link block text-2xl font-serif font-medium text-brand-primary tap-highlight-transparent">Actualidad</a>
+                <div class="pt-8">
+                    <a href="#contacto"
+                        class="mobile-link inline-block w-full py-4 rounded-full bg-brand-primary text-white font-semibold text-lg shadow-xl tap-highlight-transparent">
+                        Agendar sesión ahora
+                    </a>
+                </div>
+            </div>
+
+            <div class="absolute bottom-12 left-0 w-full flex justify-center gap-8">
+                <a href="https://linkedin.com" target="_blank"
+                    class="text-slate-400 hover:text-brand-accent transition-colors text-2xl tap-highlight-transparent">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://wa.me/56974983850" target="_blank"
+                    class="text-slate-400 hover:text-brand-whatsapp transition-colors text-2xl tap-highlight-transparent">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (Elegant Split Layout) -->
+    <section
+        class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-brand-paper min-h-[90vh] flex items-center">
+        <!-- Abstract background accent -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-surface rounded-l-[100px] -z-10 hidden lg:block"></div>
+        <div
+            class="absolute top-[-10%] right-[-5%] w-[40rem] h-[40rem] bg-brand-accentLight rounded-full blur-[100px] -z-10 opacity-60">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative w-full">
+            <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
+
+                <!-- Text Content -->
+                <div class="w-full lg:w-1/2 reveal">
+                    <div class="inline-flex items-center gap-2 mb-6">
+                        <span class="w-8 h-px bg-brand-accent"></span>
+                        <span class="text-brand-accent text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase">
+                            Executive Coach & Psicoterapeuta
+                        </span>
+                    </div>
+
+                    <h1
+                        class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-brand-primary leading-[1.1] mb-6">
+                        Transforma tu Liderazgo. <br>
+                        <span class="text-brand-accent italic font-normal">Escala tu Organización.</span>
+                    </h1>
+
+                    <p class="text-lg text-slate-600 mb-10 max-w-xl leading-relaxed">
+                        Métodos fundamentados en neurociencias y biología cultural para superar bloqueos directivos,
+                        resolver crisis de equipos y alcanzar el alto desempeño sin sacrificar tu bienestar psicológico.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/56974983850?text=Hola%20Bernabé,%20me%20gustaría%20agendar%20una%20sesión%20diagnóstica."
+                            target="_blank"
+                            class="inline-flex justify-center items-center px-8 py-4 bg-brand-primary text-white text-base font-medium rounded-full hover:bg-slate-800 transition-all shadow-premium hover:shadow-premium-hover transform hover:-translate-y-1 tap-highlight-transparent w-full sm:w-auto">
+                            Agendar Diagnóstico
+                        </a>
+                        <a href="#servicios"
+                            class="inline-flex justify-center items-center px-8 py-4 bg-white text-brand-primary border border-slate-200 text-base font-medium rounded-full hover:border-brand-primary hover:bg-slate-50 transition-all tap-highlight-transparent w-full sm:w-auto">
+                            Explorar Servicios
+                        </a>
+                    </div>
+
+                    <div class="mt-12 flex items-center gap-4">
+                        <div class="flex -space-x-3">
+                            <img class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+                                alt="Cliente">
+                            <img class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&q=80"
+                                alt="Cliente">
+                            <img class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80"
+                                alt="Cliente">
+                        </div>
+                        <div class="text-sm text-slate-500 font-medium">
+                            <strong class="text-brand-primary block">+20 años de experiencia</strong>
+                            acompañando a líderes corporativos.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="w-full lg:w-1/2 relative reveal">
+                    <!-- Decorative elements -->
+                    <div class="absolute -top-6 -left-6 w-24 h-24 pattern-dots opacity-50 z-0"></div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-accentLight rounded-full z-0"></div>
+
+                    <div class="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl">
+                        <img src="24 abr 2026, 10_40_23 p.m..png" alt="Bernabé Carrasco Sánchez"
+                            class="w-full h-auto object-cover aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5] filter contrast-105">
+
+                        <!-- Floating Badge -->
+                        <div
+                            class="absolute bottom-6 left-6 right-6 sm:right-auto bg-white/95 backdrop-blur px-6 py-4 rounded-2xl shadow-premium border border-white/20">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 bg-brand-accentLight rounded-full flex items-center justify-center text-brand-accent">
+                                    <i class="fas fa-brain text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider mb-1">
+                                        Enfoque único</p>
+                                    <p class="text-brand-primary font-bold font-serif leading-tight">Clínica &
+                                        Estrategia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST LOGOS (Minimal) -->
+    <section class="py-12 bg-white border-y border-slate-100 reveal">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <p class="text-center text-xs font-semibold text-slate-400 tracking-[0.2em] uppercase mb-8">Organizaciones e
+                Instituciones que confían</p>
+            <div
+                class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 sm:gap-x-20 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="text-lg font-serif font-bold text-slate-600 flex items-center"><i
+                        class="fas fa-university mr-2 text-slate-400"></i> U. de Concepción</div>
+                <div class="text-lg font-serif font-bold text-slate-600 flex items-center"><i
+                        class="fas fa-bolt mr-2 text-slate-400"></i> Grupo Saesa</div>
+                <div class="text-lg font-serif font-bold text-slate-600 flex items-center"><i
+                        class="fas fa-hospital mr-2 text-slate-400"></i> Red Asistencial</div>
+                <div class="text-lg font-serif font-bold text-slate-600 flex items-center"><i
+                        class="fas fa-hands-helping mr-2 text-slate-400"></i> La Protectora</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE MÍ SECTION -->
+    <section id="sobre-mi" class="py-24 lg:py-32 bg-brand-surface relative z-10">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">
+
+                <!-- Sticky Image Context -->
+                <div class="w-full lg:w-5/12 lg:relative">
+                    <div class="lg:sticky lg:top-32 reveal">
+                        <div class="aspect-square rounded-[2rem] overflow-hidden shadow-premium">
+                            <img src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&q=80&w=1000"
+                                alt="Consultoría Ejecutiva" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="w-full lg:w-7/12 reveal">
+                    <div class="inline-flex items-center gap-2 mb-6">
+                        <span class="w-8 h-px bg-brand-accent"></span>
+                        <h2 class="text-brand-accent text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase">Sobre
+                            el Director</h2>
+                    </div>
+
+                    <h3
+                        class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-primary mb-8 leading-tight">
+                        Construyendo espacios de confianza y alto desempeño.
+                    </h3>
+
+                    <div class="prose prose-lg text-slate-600">
+                        <p class="mb-6">
+                            Soy Bernabé Carrasco, Director de Feed@Back. Mi propósito profesional ha estado enfocado por
+                            más de dos décadas en <strong>crear talento, potenciar el aprendizaje continuo y otorgar
+                                sentido humano</strong> a las dinámicas organizacionales e individuales.
+                        </p>
+                        <p class="mb-8">
+                            A diferencia de enfoques puramente motivacionales, mi metodología integra el rigor del
+                            <em>psicoanálisis clínico</em> con herramientas de vanguardia en <em>neurociencias y
+                                biología cultural</em>. Esto me permite intervenir en la raíz de los problemas
+                            corporativos: entendiendo cómo la mente del líder opera bajo presión y cómo el lenguaje
+                            configura la realidad de los equipos.
+                        </p>
+                    </div>
+
+                    <!-- Value Props Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 mt-10">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                            <div
+                                class="w-10 h-10 bg-brand-accentLight rounded-full flex items-center justify-center text-brand-accent mb-4">
+                                <i class="fas fa-user-md text-lg"></i>
+                            </div>
+                            <h4 class="font-bold text-brand-primary mb-2">Rigor Clínico</h4>
+                            <p class="text-sm text-slate-500">Fundamentos psicológicos profundos para cambios
+                                sostenibles en el tiempo.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                            <div
+                                class="w-10 h-10 bg-brand-accentLight rounded-full flex items-center justify-center text-brand-accent mb-4">
+                                <i class="fas fa-chart-line text-lg"></i>
+                            </div>
+                            <h4 class="font-bold text-brand-primary mb-2">Visión Estratégica</h4>
+                            <p class="text-sm text-slate-500">Alineación del bienestar individual con los KPI's y metas
+                                de la organización.</p>
+                        </div>
+                    </div>
+
+                    <a href="#contacto"
+                        class="inline-flex items-center text-brand-primary font-bold text-lg group hover:text-brand-accent transition-colors tap-highlight-transparent">
+                        Conversemos sobre tu organización
+                        <span class="ml-2 transition-transform group-hover:translate-x-2">
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS (Bento Grid Style) -->
+    <section id="servicios" class="py-24 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <div class="inline-flex items-center gap-2 mb-4 justify-center">
+                    <span class="w-8 h-px bg-brand-accent"></span>
+                    <h2 class="text-brand-accent text-xs font-semibold tracking-[0.2em] uppercase">Metodología de
+                        Intervención</h2>
+                    <span class="w-8 h-px bg-brand-accent"></span>
+                </div>
+                <h3 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-primary mb-6">Soluciones
+                    Especializadas</h3>
+                <p class="text-slate-600 text-lg">Espacios diseñados para el desarrollo íntimo, la resolución de crisis
+                    y la escalabilidad organizacional estructural.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 reveal">
+
+                <!-- Service Card 1 -->
+                <div
+                    class="group bg-brand-surfaceAlt rounded-[2rem] p-8 sm:p-10 transition-all duration-300 hover:bg-brand-primary hover:-translate-y-2 cursor-pointer flex flex-col h-full tap-highlight-transparent">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-brand-primary mb-8 group-hover:text-brand-accent shadow-sm transition-colors">
+                        <i class="fas fa-brain text-2xl"></i>
+                    </div>
+                    <h4
+                        class="text-2xl font-serif font-bold text-brand-primary mb-4 group-hover:text-white transition-colors">
+                        Psicoterapia Clínica</h4>
+                    <p class="text-slate-600 mb-8 flex-1 group-hover:text-slate-300 transition-colors">
+                        Espacio seguro de enfoque psicoanalítico para abordar el malestar emocional, la ansiedad y el
+                        rediseño profundo de tu bienestar psicológico y mental.
+                    </p>
+                    <div
+                        class="flex items-center text-brand-primary font-semibold group-hover:text-white transition-colors">
+                        <span class="text-sm uppercase tracking-wider">Solicitar hora</span>
+                        <i
+                            class="fas fa-arrow-right ml-3 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div
+                    class="group bg-brand-surfaceAlt rounded-[2rem] p-8 sm:p-10 transition-all duration-300 hover:bg-brand-primary hover:-translate-y-2 cursor-pointer flex flex-col h-full tap-highlight-transparent">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-brand-primary mb-8 group-hover:text-brand-accent shadow-sm transition-colors">
+                        <i class="fas fa-compass text-2xl"></i>
+                    </div>
+                    <h4
+                        class="text-2xl font-serif font-bold text-brand-primary mb-4 group-hover:text-white transition-colors">
+                        Coaching Personal</h4>
+                    <p class="text-slate-600 mb-8 flex-1 group-hover:text-slate-300 transition-colors">
+                        Acompañamiento ontológico para destrabar creencias limitantes, definir metas vitales claras y
+                        tomar decisiones con consciencia plena.
+                    </p>
+                    <div
+                        class="flex items-center text-brand-primary font-semibold group-hover:text-white transition-colors">
+                        <span class="text-sm uppercase tracking-wider">Solicitar hora</span>
+                        <i
+                            class="fas fa-arrow-right ml-3 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div
+                    class="group bg-brand-surfaceAlt rounded-[2rem] p-8 sm:p-10 transition-all duration-300 hover:bg-brand-primary hover:-translate-y-2 cursor-pointer flex flex-col h-full tap-highlight-transparent lg:row-span-2">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-brand-primary mb-8 group-hover:text-brand-accent shadow-sm transition-colors">
+                        <i class="fas fa-user-tie text-2xl"></i>
+                    </div>
+                    <h4
+                        class="text-2xl font-serif font-bold text-brand-primary mb-4 group-hover:text-white transition-colors">
+                        Coaching Ejecutivo</h4>
+                    <p class="text-slate-600 mb-8 flex-1 group-hover:text-slate-300 transition-colors">
+                        Desarrollo intensivo de habilidades directivas. Mejora tu toma de decisiones bajo presión,
+                        comunicación estratégica y gestión emocional en la alta dirección para inspirar a otros.
+                    </p>
+                    <div class="mt-auto hidden lg:block mb-8">
+                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=600"
+                            alt="Executive Coaching"
+                            class="w-full h-40 object-cover rounded-xl opacity-80 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div
+                        class="flex items-center text-brand-primary font-semibold group-hover:text-white transition-colors">
+                        <span class="text-sm uppercase tracking-wider">Solicitar propuesta</span>
+                        <i
+                            class="fas fa-arrow-right ml-3 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div
+                    class="group bg-brand-surfaceAlt rounded-[2rem] p-8 sm:p-10 transition-all duration-300 hover:bg-brand-primary hover:-translate-y-2 cursor-pointer flex flex-col h-full tap-highlight-transparent">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-brand-primary mb-8 group-hover:text-brand-accent shadow-sm transition-colors">
+                        <i class="fas fa-users-cog text-2xl"></i>
+                    </div>
+                    <h4
+                        class="text-2xl font-serif font-bold text-brand-primary mb-4 group-hover:text-white transition-colors">
+                        Equipos y Cambio</h4>
+                    <p class="text-slate-600 mb-8 flex-1 group-hover:text-slate-300 transition-colors">
+                        Intervención estructural para resolver conflictos, alinear propósitos y transformar grupos en
+                        ecosistemas proactivos durante transiciones corporativas.
+                    </p>
+                    <div
+                        class="flex items-center text-brand-primary font-semibold group-hover:text-white transition-colors">
+                        <span class="text-sm uppercase tracking-wider">Saber más</span>
+                        <i
+                            class="fas fa-arrow-right ml-3 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div
+                    class="group bg-brand-surfaceAlt rounded-[2rem] p-8 sm:p-10 transition-all duration-300 hover:bg-brand-primary hover:-translate-y-2 cursor-pointer flex flex-col h-full tap-highlight-transparent">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-brand-primary mb-8 group-hover:text-brand-accent shadow-sm transition-colors">
+                        <i class="fas fa-chalkboard-teacher text-2xl"></i>
+                    </div>
+                    <h4
+                        class="text-2xl font-serif font-bold text-brand-primary mb-4 group-hover:text-white transition-colors">
+                        Formación</h4>
+                    <p class="text-slate-600 mb-8 flex-1 group-hover:text-slate-300 transition-colors">
+                        Programas de inmersión y capacitación basados en biología cultural para fomentar el buen trato y
+                        un liderazgo profundamente humano y efectivo.
+                    </p>
+                    <div
+                        class="flex items-center text-brand-primary font-semibold group-hover:text-white transition-colors">
+                        <span class="text-sm uppercase tracking-wider">Saber más</span>
+                        <i
+                            class="fas fa-arrow-right ml-3 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS (Dark Impact Section) -->
+    <section id="beneficios" class="py-24 lg:py-32 bg-brand-primary text-white relative overflow-hidden reveal">
+        <!-- Minimal geometric background -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-slate-800/20 transform skew-x-12 translate-x-1/4"></div>
+        <div class="absolute -bottom-32 -left-32 w-96 h-96 border-[40px] border-white/5 rounded-full"></div>
+
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+                <div>
+                    <h2 class="text-brand-accentLight font-semibold tracking-[0.2em] uppercase text-xs mb-4">El Valor
+                        del Proceso</h2>
+                    <h3 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 leading-tight">Resultados
+                        tangibles para mentes complejas.</h3>
+                    <p class="text-slate-300 text-lg mb-12">
+                        El trabajo terapéutico y de coaching no es magia, es metodología estructurada. Estos son los
+                        retornos de inversión psicológicos y operativos que experimentan mis clientes:
+                    </p>
+
+                    <ul class="space-y-8">
+                        <li class="flex items-start gap-5">
+                            <div
+                                class="w-12 h-12 rounded-full border border-brand-accent/50 flex items-center justify-center flex-shrink-0 text-brand-accent bg-white/5">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">Nitidez Estratégica</h4>
+                                <p class="text-slate-400">Reduce el ruido mental y la carga alostática (estrés crónico)
+                                    para tomar decisiones asertivas bajo presión.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-5">
+                            <div
+                                class="w-12 h-12 rounded-full border border-brand-accent/50 flex items-center justify-center flex-shrink-0 text-brand-accent bg-white/5">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">Liderazgo Biocéntrico</h4>
+                                <p class="text-slate-400">Desarrolla la capacidad de generar confianza genuina,
+                                    transformando grupos reactivos en ecosistemas resilientes.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-5">
+                            <div
+                                class="w-12 h-12 rounded-full border border-brand-accent/50 flex items-center justify-center flex-shrink-0 text-brand-accent bg-white/5">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">Resolución de Fricciones</h4>
+                                <p class="text-slate-400">Herramientas conversacionales para desarticular crisis de
+                                    equipos y mejorar el clima de convivencia laboral.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:pl-10">
+                    <div class="bg-white rounded-[2rem] p-10 sm:p-12 text-brand-primary shadow-2xl relative">
+                        <!-- Decorative Quote mark -->
+                        <div
+                            class="absolute top-8 right-10 text-6xl text-slate-100 font-serif leading-none select-none">
+                            "</div>
+
+                        <h4 class="font-serif text-2xl sm:text-3xl font-bold mb-6 relative z-10">¿Listo para el
+                            siguiente paso?</h4>
+                        <p class="text-slate-600 text-lg mb-10 relative z-10">
+                            Ya sea para desbloquear tu potencial personal o escalar la cultura de tu organización, la
+                            primera conversación es fundamental y estrictamente confidencial.
+                        </p>
+
+                        <a href="https://wa.me/56974983850" target="_blank"
+                            class="w-full flex justify-center items-center px-6 py-5 bg-brand-whatsapp hover:bg-[#0ea674] text-white text-lg font-bold rounded-xl transition-all shadow-lg shadow-emerald-500/20 tap-highlight-transparent group">
+                            <i class="fab fa-whatsapp text-2xl mr-3 group-hover:scale-110 transition-transform"></i>
+                            Hablar por WhatsApp
+                        </a>
+                        <p class="text-center text-sm text-slate-500 mt-5 font-medium"><i
+                                class="fas fa-lock mr-2 text-slate-300"></i>Contacto Directo. Privacidad Absoluta.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ACTUALIDAD (Clean Cards) -->
+    <section id="actualidad" class="py-24 lg:py-32 bg-brand-surfaceAlt reveal">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 mb-4">
+                        <span class="w-8 h-px bg-brand-accent"></span>
+                        <h2 class="text-brand-accent text-xs font-semibold tracking-[0.2em] uppercase">Ecosistema de
+                            Conocimiento</h2>
+                    </div>
+                    <h3 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-primary">Formación &
+                        Reflexiones</h3>
+                </div>
+                <a href="#contacto"
+                    class="inline-flex items-center text-brand-primary font-bold hover:text-brand-accent transition-colors">
+                    Ver todos los artículos <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Card 1 -->
+                <a href="cursos.html"
+                    class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-premium transition-all duration-500 tap-highlight-transparent flex flex-col">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="4373b50f-f93c-4e8b-8ee6-6c0aad9548a1.jpg" alt="Capacitación"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 backdrop-blur text-brand-primary text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider">
+                            Programas</div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h4
+                            class="font-serif text-2xl font-bold text-brand-primary mb-3 group-hover:text-brand-accent transition-colors">
+                            Capacitación y Formación Directiva</h4>
+                        <p class="text-slate-600 mb-6 flex-1">Experiencias de aprendizaje real en habilidades
+                            comunicacionales, contención en crisis y biología de la confianza para equipos.</p>
+                        <span class="text-sm font-semibold text-brand-accent uppercase tracking-wider">Descubrir cursos
+                            &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- Blog Card 2 -->
+                <a href="noticias.html"
+                    class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-premium transition-all duration-500 tap-highlight-transparent flex flex-col">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?q=80&w=800&auto=format&fit=crop"
+                            alt="Noticias"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 backdrop-blur text-brand-primary text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider">
+                            Artículos</div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h4
+                            class="font-serif text-2xl font-bold text-brand-primary mb-3 group-hover:text-brand-accent transition-colors">
+                            El impacto del Arte en el Liderazgo</h4>
+                        <p class="text-slate-600 mb-6 flex-1">Reflexiones sobre cómo la apreciación artística reduce el
+                            estrés corporativo y estimula el pensamiento divergente e innovador.</p>
+                        <span class="text-sm font-semibold text-brand-accent uppercase tracking-wider">Leer artículo
+                            &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- Blog Card 3 -->
+                <a href="interes.html"
+                    class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-premium transition-all duration-500 tap-highlight-transparent flex flex-col">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="a4819310-7064-4f9e-b4b6-841e51ad5219.jpg" alt="Psicoanálisis"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 backdrop-blur text-brand-primary text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider">
+                            Galería</div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h4
+                            class="font-serif text-2xl font-bold text-brand-primary mb-3 group-hover:text-brand-accent transition-colors">
+                            Clínica, Huellas Mnémicas y Pintura</h4>
+                        <p class="text-slate-600 mb-6 flex-1">Explora una biblioteca visual que entrelaza los
+                            fundamentos del psicoanálisis con la expresión pictórica como ventana al inconsciente.</p>
+                        <span class="text-sm font-semibold text-brand-accent uppercase tracking-wider">Ver galería
+                            &rarr;</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ (Minimalist Elegance) -->
+    <section class="py-24 bg-white reveal">
+        <div class="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="font-serif text-3xl sm:text-4xl font-bold text-brand-primary mb-4">Preguntas Frecuentes</h3>
+                <p class="text-slate-600 text-lg">Claridad antes de dar el primer paso.</p>
+            </div>
+
+            <div class="space-y-2">
+                <details class="group border-b border-slate-200">
+                    <summary
+                        class="py-6 cursor-pointer flex justify-between items-center outline-none tap-highlight-transparent">
+                        <span
+                            class="font-bold text-lg sm:text-xl text-brand-primary pr-6 group-hover:text-brand-accent transition-colors">¿Cuál
+                            es la diferencia entre Psicoterapia y Coaching Ejecutivo?</span>
+                        <span class="text-brand-accent transform group-open:rotate-180 transition-transform">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="pb-6 text-slate-600 text-lg leading-relaxed">
+                        La psicoterapia se enfoca en sanar heridas, patrones profundos de comportamiento y salud mental
+                        clínica. El coaching ejecutivo se orienta a objetivos presentes y futuros, destrabando
+                        habilidades de liderazgo, comunicación estratégica y resolución de conflictos en el entorno
+                        laboral.
+                    </div>
+                </details>
+
+                <details class="group border-b border-slate-200">
+                    <summary
+                        class="py-6 cursor-pointer flex justify-between items-center outline-none tap-highlight-transparent">
+                        <span
+                            class="font-bold text-lg sm:text-xl text-brand-primary pr-6 group-hover:text-brand-accent transition-colors">¿Cómo
+                            funciona el proceso de consultoría para empresas?</span>
+                        <span class="text-brand-accent transform group-open:rotate-180 transition-transform">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="pb-6 text-slate-600 text-lg leading-relaxed">
+                        Iniciamos con un diagnóstico situacional (entrevistas y observación) para mapear la cultura y
+                        los puntos de fricción reales. Posteriormente, presento un diseño de intervención a la medida
+                        que puede incluir coaching individual a la plana mayor, talleres formativos o asesoría en
+                        gestión del cambio.
+                    </div>
+                </details>
+
+                <details class="group border-b border-slate-200">
+                    <summary
+                        class="py-6 cursor-pointer flex justify-between items-center outline-none tap-highlight-transparent">
+                        <span
+                            class="font-bold text-lg sm:text-xl text-brand-primary pr-6 group-hover:text-brand-accent transition-colors">¿Las
+                            sesiones son estrictamente confidenciales?</span>
+                        <span class="text-brand-accent transform group-open:rotate-180 transition-transform">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="pb-6 text-slate-600 text-lg leading-relaxed">
+                        Absolutamente. La efectividad de mi trabajo radica en la confianza ("Biología de la Confianza").
+                        Tanto en el diván clínico como en los procesos de consultoría corporativa, el secreto
+                        profesional y la confidencialidad de los relatos son intransables.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contacto" class="bg-brand-primary pt-24 pb-12 text-white relative reveal">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-20">
+
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="font-serif text-4xl sm:text-5xl font-bold mb-6 leading-tight">Iniciemos
+                        la<br>conversación.</h2>
+                    <p class="text-slate-400 text-lg mb-12 max-w-md">
+                        Agenda una primera sesión diagnóstica o solicita una propuesta formal para intervenir en tu
+                        organización.
+                    </p>
+
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt text-brand-accent text-xl mt-1"></i>
+                            <div>
+                                <p class="font-bold text-lg">Ubicación & Modalidad</p>
+                                <p class="text-slate-400">San Pedro de la Paz, Concepción.<br>Sesiones presenciales y
+                                    Online (Latam).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-envelope text-brand-accent text-xl mt-1"></i>
+                            <div>
+                                <p class="font-bold text-lg">Email Directo</p>
+                                <a href="mailto:contacto@bernabe.cl"
+                                    class="text-slate-400 hover:text-white transition-colors">contacto@bernabe.cl</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-phone-alt text-brand-accent text-xl mt-1"></i>
+                            <div>
+                                <p class="font-bold text-lg">Atención Telefónica / WA</p>
+                                <a href="tel:+56974983850" class="text-slate-400 hover:text-white transition-colors">+56
+                                    9 7498 3850</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-slate-800/50 p-8 sm:p-10 rounded-[2rem] border border-slate-700/50 backdrop-blur-sm">
+                    <form
+                        onsubmit="event.preventDefault(); alert('Mensaje enviado. En producción, conectar a un backend.');"
+                        class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Nombre completo</label>
+                            <input type="text"
+                                class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors"
+                                placeholder="Ej. Carlos Martínez" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Correo corporativo /
+                                personal</label>
+                            <input type="email"
+                                class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors"
+                                placeholder="tu@email.com" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Área de interés</label>
+                            <select
+                                class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors appearance-none"
+                                required>
+                                <option value="" disabled selected>Selecciona una opción...</option>
+                                <option value="coaching_ejecutivo">Coaching Ejecutivo (Liderazgo)</option>
+                                <option value="consultoria">Consultoría a Empresas / Equipos</option>
+                                <option value="psicoterapia">Psicoterapia Clínica</option>
+                                <option value="coaching_life">Coaching Personal</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Mensaje breve</label>
+                            <textarea rows="4"
+                                class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors resize-none"
+                                placeholder="¿En qué puedo ayudarte hoy?" required></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-brand-accent hover:bg-[#9c7e46] text-white font-bold text-lg py-4 rounded-xl transition-colors tap-highlight-transparent">
+                            Enviar Solicitud
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <img src="image-removebg-preview (3).png" alt="Feed@Back Logo" class="h-8 w-auto object-contain">
+                    <span class="font-serif font-bold text-white tracking-tight">Feed@Back EIRL</span>
+                </div>
+
+                <p class="text-sm text-slate-500">
+                    &copy; 2026 Bernabé Carrasco Sánchez. Todos los derechos reservados.
+                </p>
+
+                <div class="flex space-x-6">
+                    <a href="https://linkedin.com" target="_blank"
+                        class="text-slate-500 hover:text-white transition-colors text-xl tap-highlight-transparent">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/56974983850" target="_blank"
+                        class="text-slate-500 hover:text-brand-whatsapp transition-colors text-xl tap-highlight-transparent">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/56974983850?text=Hola%20Bernabé,%20estoy%20en%20tu%20sitio%20web%20y%20me%20gustaría%20información."
+        target="_blank"
+        class="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 w-14 h-14 sm:w-16 sm:h-16 bg-brand-whatsapp text-white rounded-full flex items-center justify-center text-3xl shadow-[0_10px_30px_rgba(16,185,129,0.3)] hover:scale-110 transition-transform z-50 hover:bg-[#0ea674] tap-highlight-transparent">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Menu Móvil Lógica
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                menu.classList.remove('opacity-0', 'pointer-events-none');
+                document.body.classList.add('mobile-menu-active');
+                line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+                line2.style.opacity = '0';
+                line3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            } else {
+                menu.classList.add('opacity-0', 'pointer-events-none');
+                document.body.classList.remove('mobile-menu-active');
+                line1.style.transform = 'none';
+                line2.style.opacity = '1';
+                line3.style.transform = 'none';
+            }
+        }
+
+        btn.addEventListener('click', toggleMenu);
+
+        const mobileLinks = menu.querySelectorAll('.mobile-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMenuOpen) toggleMenu();
+            });
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('navbar-scrolled');
+                navbar.classList.remove('pt-6', 'pb-6');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+                navbar.classList.add('pt-6', 'pb-6');
+            }
+        });
+
+        window.dispatchEvent(new Event('scroll'));
+
+        // Intersection Observer para Animaciones (Scroll Reveal)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>

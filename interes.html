@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículos de Interés | Bernabé Carrasco</title>
+    <meta name="description" content="Reflexiones, artículos y recursos de interés sobre cultura organizacional, psicología y liderazgo.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], },
+                    colors: {
+                        brand: {
+                            dark: '#212529', primary: '#b4975a', light: '#f8f9fa', accent: '#10b981',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-brand-light antialiased selection:bg-brand-primary selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <img src="image-removebg-preview (3).png" alt="Feed@Back Logo" class="h-10 w-auto object-contain">
+                    <div>
+                        <span class="font-bold text-xl text-brand-dark tracking-tight block leading-none">Feed@Back</span>
+                        <span class="text-xs text-slate-500 tracking-wide font-medium">BERNABÉ CARRASCO</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html#sobre-mi" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition">Sobre mí</a>
+                    <a href="index.html#servicios" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition">Servicios</a>
+                    <a href="index.html#actualidad" class="text-sm font-medium text-brand-primary transition">Actualidad</a>
+                    <a href="index.html#contacto" class="text-sm font-medium text-brand-primary hover:text-brand-accent transition">Agendar sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-32 pb-16 bg-white border-b border-slate-100 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-[-20%] left-[-10%] w-96 h-96 bg-yellow-50 rounded-full blur-3xl opacity-70"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-yellow-50 text-yellow-800 text-sm font-semibold tracking-wide mb-4 border border-yellow-100">Biblioteca</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-brand-dark tracking-tight mb-4">Artículos de Interés</h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">Reflexiones, metodologías y recursos gratuitos para nutrir tu visión sobre el bienestar personal y el desarrollo corporativo.</p>
+        </div>
+    </section>
+
+    <!-- Interes Content -->
+    <section class="py-16 bg-slate-50 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Resumen General -->
+            <div class="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-slate-200 mb-12 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2"></div>
+                <div class="relative z-10 max-w-4xl">
+                    <h2 class="text-2xl font-bold text-brand-dark mb-4">Psicoanálisis, Arte y Biología Cultural</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-4">
+                        Mi trabajo no se limita al diván o a la consultoría ejecutiva; se expande hacia la expresión artística y la biología del conocer. Entiendo la pintura como una ventana directa al inconsciente, un recurso que permite tramitar la angustia y dar forma a lo indecible, especialmente en el tratamiento del trauma.
+                    </p>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        En esta biblioteca visual y reflexiva, comparto cómo el arte se entrelaza con la clínica psicoanalítica, los aprendizajes matrízticos junto a Humberto Maturana y el desafío de construir la "felicidad de los equipos" en una era post-postmoderna. Es una invitación a mirar lo que nos habita desde el lenguaje, la escucha y el color.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Galería de Artículos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Item 1 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="interes/1776739011165.jpg" alt="Pintura Vice" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">El Arte como Síntoma y Expresión</h3>
+                        <p class="text-slate-600 text-sm mb-4">La pintura como canal para sentir y sublimar la angustia frente a la vida, reflejando el mundo interno. Obra en acrílico sobre madera: el rostro de Vice y su mundo.</p>
+                        <div class="mt-auto pt-4 border-t border-slate-100">
+                            <p class="text-xs text-slate-500 italic">"En mi trabajo como analista mi afán es también pintar... hacer de esta un síntoma, como la familia."</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 2 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="interes/1764618395389.jpg" alt="Huellas Mnémicas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Huellas Mnémicas en el Arte</h3>
+                        <p class="text-slate-600 text-sm mb-4">Exploración de cómo el arte y los sueños comparten el lenguaje del inconsciente, actuando como recursos perceptivos que estructuran nuestro psiquismo.</p>
+                        <div class="mt-auto pt-4 border-t border-slate-100">
+                            <p class="text-xs text-slate-500 italic">"La pintura, el arte, como los sueños son parte del inconsciente y de nuestro psiquismo..."</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 3 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="interes/1753293712870.jpg" alt="Arte y Trauma" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Trauma y Creatividad</h3>
+                        <p class="text-slate-600 text-sm mb-4">El rol terapéutico de la expresión artística en el tratamiento clínico del trauma, incentivando la creatividad a través de la escucha atenta y analítica.</p>
+                        <div class="mt-auto pt-4 border-t border-slate-100">
+                            <p class="text-xs text-slate-500 italic">"La expresión artística se acerca al tratamiento de una persona con trauma, desde el escuchar y analizar..."</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 4 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="interes/1730398452104.jpg" alt="El habitar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Conocer lo que nos Habita</h3>
+                        <p class="text-slate-600 text-sm mb-4">La vital importancia del autoconocimiento en psicoterapia: descubrir qué nos inunda como seres humanos a través de la escucha mutua y el lenguaje.</p>
+                        <div class="mt-auto pt-4 border-t border-slate-100">
+                            <p class="text-xs text-slate-500 italic">"Poder conocer aquello que lo habita y lo hace ser la persona que está siendo..."</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 5 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="interes/1579684979755.jpg" alt="Dibujos Matrízticos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Exposición "Dibujos Matrízticos"</h3>
+                        <p class="text-slate-600 text-sm mb-4">Acuarelas basadas en estudios con Humberto Maturana y Ximena Dávila, mostrando figuras emocionales desde una mirada lúdica a la biología cultural.</p>
+                        <div class="mt-auto pt-4 border-t border-slate-100">
+                            <p class="text-xs text-slate-500 italic">"Es una mirada lúdica a la biología cultural, al ser humano en particular y su forma de habitar el mundo."</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 6 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="interes/1583623862804.jpg" alt="Felicidad Equipos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">La Felicidad de los Equipos</h3>
+                        <p class="text-slate-600 text-sm mb-4">Reflexiones críticas sobre la era post-postmoderna y el desafío constante de fomentar un bienestar organizacional auténtico y cohesionado.</p>
+                        <div class="mt-auto pt-4 border-t border-slate-100">
+                            <p class="text-xs text-slate-500 italic">"Post post moderna o la felicidad de los equipos..."</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="index.html" class="inline-flex items-center text-brand-primary font-medium hover:underline">
+                    <i class="fas fa-arrow-left mr-2"></i> Volver a la página principal
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="image-removebg-preview (3).png" alt="Feed@Back Logo" class="h-8 w-auto object-contain">
+                    <span class="font-bold text-white tracking-tight">Feed@Back EIRL</span>
+                </div>
+                <p class="text-sm text-center md:text-left">&copy; 2024 Bernabé Carrasco Sánchez. Todos los derechos reservados.</p>
+                <div class="flex space-x-4">
+                    <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/56974983850" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
