@@ -1,196 +1,245 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticias y Novedades | Bernabé Carrasco</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Noticias y Actualidad | Bernabé Carrasco</title>
     <meta name="description" content="Noticias, eventos y actualizaciones del sector por Bernabé Carrasco.">
-    
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Noticias y Actualidad | Bernabé Carrasco">
+    <meta property="og:description" content="Análisis y tendencias sobre liderazgo y salud mental.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?q=80&w=800&auto=format&fit=crop">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- External Styles & Tailwind -->
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'], },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
                     colors: {
                         brand: {
-                            dark: '#212529', primary: '#b4975a', light: '#f8f9fa', accent: '#10b981',
+                            ink: '#0f1115',
+                            paper: '#ffffff',
+                            surface: '#f8f9fa',
+                            surfaceAlt: '#f1f3f5',
+                            primary: '#212529',
+                            accent: '#b4975a',
+                            accentLight: '#fdfbf7',
+                            whatsapp: '#10b981',
                         }
+                    },
+                    boxShadow: {
+                        'premium': '0 10px 40px -10px rgba(15, 23, 42, 0.08)',
+                        'premium-hover': '0 20px 40px -10px rgba(15, 23, 42, 0.15)',
                     }
                 }
             }
         }
     </script>
-    <style>
-        .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
-        .card-hover { transition: all 0.3s ease; }
-        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
-    </style>
 </head>
-<body class="font-sans text-slate-800 bg-brand-light antialiased selection:bg-brand-primary selection:text-white">
+
+<body class="font-sans antialiased selection:bg-brand-accent selection:text-white relative pb-safe">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 glass shadow-sm" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
-                    <img src="image-removebg-preview (3).png" alt="Feed@Back Logo" class="h-10 w-auto object-contain">
-                    <div>
-                        <span class="font-bold text-xl text-brand-dark tracking-tight block leading-none">Feed@Back</span>
-                        <span class="text-xs text-slate-500 tracking-wide font-medium">BERNABÉ CARRASCO</span>
+    <nav class="fixed w-full z-50 transition-all duration-500 pt-6 pb-6 bg-transparent" id="navbar">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 cursor-pointer tap-highlight-transparent">
+                    <img src="logo-feedback.png" alt="Feed@Back Logo" class="h-10 w-auto object-contain">
+                    <div class="flex flex-col">
+                        <span class="font-serif font-bold text-xl text-brand-primary tracking-tight leading-none mb-1">Feed@Back</span>
+                        <span class="text-[9px] text-slate-500 tracking-[0.25em] font-semibold uppercase">Bernabé Carrasco</span>
                     </div>
                 </a>
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="index.html#sobre-mi" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition">Sobre mí</a>
-                    <a href="index.html#servicios" class="text-sm font-medium text-slate-600 hover:text-brand-primary transition">Servicios</a>
-                    <a href="index.html#actualidad" class="text-sm font-medium text-brand-primary transition">Actualidad</a>
-                    <a href="index.html#contacto" class="text-sm font-medium text-brand-primary hover:text-brand-accent transition">Agendar sesión</a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-10 items-center">
+                    <a href="index.html#sobre-mi" class="text-sm font-medium text-slate-600 hover:text-brand-accent transition-colors relative group">
+                        Sobre mí
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-accent transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#servicios" class="text-sm font-medium text-slate-600 hover:text-brand-accent transition-colors relative group">
+                        Servicios
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-accent transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="noticias.html" class="text-sm font-semibold text-brand-accent transition-colors relative group">
+                        Noticias
+                        <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-brand-accent"></span>
+                    </a>
+                    <a href="index.html#contacto" class="text-sm font-semibold text-white bg-brand-primary hover:bg-slate-800 px-6 py-2.5 rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Agendar sesión
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-primary focus:outline-none p-2 tap-highlight-transparent z-50 relative">
+                        <div class="w-6 flex flex-col gap-1.5 items-end">
+                            <span class="w-full h-0.5 bg-current rounded-full transition-all duration-300 origin-right" id="line1"></span>
+                            <span class="w-full h-0.5 bg-current rounded-full transition-all duration-300" id="line2"></span>
+                            <span class="w-full h-0.5 bg-current rounded-full transition-all duration-300 origin-right" id="line3"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 mobile-overlay z-40 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden flex flex-col justify-center px-8">
+            <div class="space-y-6 text-center mt-10">
+                <a href="index.html#sobre-mi" class="mobile-link block text-2xl font-serif font-medium text-brand-primary tap-highlight-transparent">Sobre mí</a>
+                <a href="index.html#servicios" class="mobile-link block text-2xl font-serif font-medium text-brand-primary tap-highlight-transparent">Servicios</a>
+                <a href="cursos.html" class="mobile-link block text-2xl font-serif font-medium text-brand-primary tap-highlight-transparent">Cursos</a>
+                <a href="noticias.html" class="mobile-link block text-2xl font-serif font-medium text-brand-accent tap-highlight-transparent">Noticias</a>
+                <a href="interes.html" class="mobile-link block text-2xl font-serif font-medium text-brand-primary tap-highlight-transparent">Interés</a>
+                <div class="pt-8">
+                    <a href="index.html#contacto" class="mobile-link inline-block w-full py-4 rounded-full bg-brand-primary text-white font-semibold text-lg shadow-xl tap-highlight-transparent">
+                        Agendar sesión
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Header Section -->
-    <section class="pt-32 pb-16 bg-white border-b border-slate-100 relative overflow-hidden">
+    <header class="hero-mobile-adjust pt-32 pb-16 bg-white border-b border-slate-100 relative overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <div class="absolute top-[-20%] right-[-10%] w-96 h-96 bg-emerald-50 rounded-full blur-3xl opacity-70"></div>
+            <div class="absolute top-[-20%] right-[-10%] w-96 h-96 bg-brand-accentLight rounded-full blur-3xl opacity-70"></div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <span class="inline-block py-1 px-3 rounded-full bg-emerald-50 text-emerald-600 text-sm font-semibold tracking-wide mb-4 border border-emerald-100">Novedades</span>
-            <h1 class="text-4xl md:text-5xl font-extrabold text-brand-dark tracking-tight mb-4">Noticias del Sector</h1>
-            <p class="text-lg text-slate-600 max-w-2xl mx-auto">Mantente al tanto de las últimas tendencias, investigaciones en neurociencias y mis participaciones en eventos corporativos.</p>
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10 text-center reveal">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-accentLight text-brand-accent text-xs font-bold tracking-widest uppercase mb-4 border border-brand-accent/10">Actualidad</span>
+            <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-brand-primary tracking-tight mb-4">Noticias del Sector</h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">Tendencias, investigaciones y participación en el mundo organizacional.</p>
         </div>
-    </section>
+    </header>
 
-    <!-- Noticias Content -->
-    <section class="py-16 bg-slate-50 min-h-screen">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-brand-dark mb-10 border-b border-slate-200 pb-4">Últimas Actualizaciones y Análisis</h2>
-
+    <!-- Content Section -->
+    <main class="py-16 bg-brand-surface min-h-screen">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <h2 class="font-serif text-3xl font-bold text-brand-primary mb-10 border-b border-slate-200 pb-4 reveal">Últimas Actualizaciones</h2>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Noticia 1: Arte y Pintura -->
-                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
-                    <div class="relative h-48">
-                        <img src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?q=80&w=800&auto=format&fit=crop" alt="Museo de Arte Pintura" class="w-full h-full object-cover">
+                <!-- Noticia 1 -->
+                <article class="bg-white rounded-[2rem] overflow-hidden border border-slate-200 shadow-sm hover:shadow-premium transition-all duration-500 flex flex-col reveal group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?q=80&w=800&auto=format&fit=crop" alt="Arte y Psicología" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center text-xs text-slate-400 mb-3">
-                            <span><i class="far fa-calendar-alt mr-1"></i> Actualidad</span>
-                            <span class="mx-2">&bull;</span>
-                            <span class="text-emerald-500 font-semibold">Arte y Psicología</span>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex items-center text-[10px] font-bold text-brand-accent uppercase tracking-widest mb-3">
+                            <span>Psicología</span>
+                            <span class="mx-2 opacity-30">&bull;</span>
+                            <span>Arte</span>
                         </div>
-                        <h3 class="text-xl font-bold text-brand-dark mb-3">El Arte y la Pintura: Ventanas al Inconsciente en el Liderazgo</h3>
-                        <p class="text-slate-600 text-sm mb-4 flex-1">Una reflexión profunda sobre cómo la apreciación pictórica y las visitas a museos fomentan el pensamiento divergente, reducen la carga alostática y permiten a los líderes corporativos reconectar con su creatividad esencial.</p>
-                        <a href="index.html#contacto" class="inline-flex items-center text-brand-primary font-medium text-sm hover:text-brand-accent transition">
-                            Leer ensayo completo <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        <h3 class="font-serif text-xl font-bold text-brand-primary mb-3">Arte y Liderazgo</h3>
+                        <p class="text-slate-500 text-sm mb-6 flex-1 leading-relaxed">Cómo la apreciación pictórica fomenta el pensamiento divergente en líderes corporativos.</p>
+                        <a href="index.html#contacto" class="text-xs font-bold text-brand-primary uppercase tracking-wider hover:text-brand-accent transition-colors inline-flex items-center">
+                            Leer ensayo <i class="fas fa-arrow-right ml-2 text-[10px]"></i>
                         </a>
                     </div>
                 </article>
 
-                <!-- Noticia 2: Burnout -->
-                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
-                    <div class="relative h-48">
-                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Burnout" class="w-full h-full object-cover">
+                <!-- Noticia 2 -->
+                <article class="bg-white rounded-[2rem] overflow-hidden border border-slate-200 shadow-sm hover:shadow-premium transition-all duration-500 flex flex-col reveal group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Burnout" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center text-xs text-slate-400 mb-3">
-                            <span><i class="far fa-calendar-alt mr-1"></i> Salud Ocupacional</span>
-                            <span class="mx-2">&bull;</span>
-                            <span class="text-emerald-500 font-semibold">Tendencias</span>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex items-center text-[10px] font-bold text-brand-accent uppercase tracking-widest mb-3">
+                            <span>Salud</span>
+                            <span class="mx-2 opacity-30">&bull;</span>
+                            <span>Burnout</span>
                         </div>
-                        <h3 class="text-xl font-bold text-brand-dark mb-3">El Síndrome de Burnout en los Equipos de Salud y Servicios</h3>
-                        <p class="text-slate-600 text-sm mb-4 flex-1">Cifras recientes evidencian un alza crítica en las licencias por salud mental. El desafío actual no es solo la recuperación, sino el diseño de espacios de trabajo contenedores.</p>
-                        <a href="index.html#contacto" class="inline-flex items-center text-brand-primary font-medium text-sm hover:text-brand-accent transition">
-                            Solicitar intervención en crisis <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        <h3 class="font-serif text-xl font-bold text-brand-primary mb-3">Gestión del Burnout</h3>
+                        <p class="text-slate-500 text-sm mb-6 flex-1 leading-relaxed">El desafío actual de diseñar espacios de trabajo contenedores ante el alza de licencias.</p>
+                        <a href="index.html#contacto" class="text-xs font-bold text-brand-primary uppercase tracking-wider hover:text-brand-accent transition-colors inline-flex items-center">
+                            Ver intervención <i class="fas fa-arrow-right ml-2 text-[10px]"></i>
                         </a>
                     </div>
                 </article>
 
-                <!-- Noticia 3: Neurociencias -->
-                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
-                    <div class="relative h-48">
-                        <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Neurociencias" class="w-full h-full object-cover">
+                <!-- Noticia 3 -->
+                <article class="bg-white rounded-[2rem] overflow-hidden border border-slate-200 shadow-sm hover:shadow-premium transition-all duration-500 flex flex-col reveal group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Neurociencias" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center text-xs text-slate-400 mb-3">
-                            <span><i class="far fa-calendar-alt mr-1"></i> Investigación</span>
-                            <span class="mx-2">&bull;</span>
-                            <span class="text-emerald-500 font-semibold">Neurociencias</span>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex items-center text-[10px] font-bold text-brand-accent uppercase tracking-widest mb-3">
+                            <span>Neurociencia</span>
+                            <span class="mx-2 opacity-30">&bull;</span>
+                            <span>Estrategia</span>
                         </div>
-                        <h3 class="text-xl font-bold text-brand-dark mb-3">Neurociencias aplicadas a la Toma de Decisiones Estratégicas</h3>
-                        <p class="text-slate-600 text-sm mb-4 flex-1">Cómo el estrés prolongado altera la corteza prefrontal de los directivos y qué intervenciones basadas en neurociencias corporativas están marcando la pauta.</p>
-                        <a href="index.html#contacto" class="inline-flex items-center text-brand-primary font-medium text-sm hover:text-brand-accent transition">
-                            Ver programas ejecutivos <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Noticia 4: Psicoterapia Evento -->
-                <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
-                    <div class="relative h-48">
-                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Congreso" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center text-xs text-slate-400 mb-3">
-                            <span><i class="far fa-calendar-alt mr-1"></i> Hitos Profesionales</span>
-                            <span class="mx-2">&bull;</span>
-                            <span class="text-emerald-500 font-semibold">Eventos</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-brand-dark mb-3">Nuevas Perspectivas en la Clínica Psicoanalítica</h3>
-                        <p class="text-slate-600 text-sm mb-4 flex-1">Reflexiones tras la culminación del posgrado en la Asociación Latinoamericana de Estudios Freudianos, integrando miradas continentales sobre el malestar contemporáneo.</p>
-                        <a href="index.html#contacto" class="inline-flex items-center text-brand-primary font-medium text-sm hover:text-brand-accent transition">
-                            Conocer más sobre mi enfoque <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                        </a>
-                    </div>
-                </article>
-
-                 <!-- Noticia 5: Equipos Híbridos -->
-                 <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
-                    <div class="relative h-48">
-                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Equipos" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center text-xs text-slate-400 mb-3">
-                            <span><i class="far fa-calendar-alt mr-1"></i> Desarrollo Organizacional</span>
-                            <span class="mx-2">&bull;</span>
-                            <span class="text-emerald-500 font-semibold">Liderazgo</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-brand-dark mb-3">Construcción de Lazos Sólidos en Equipos Fragmentados</h3>
-                        <p class="text-slate-600 text-sm mb-4 flex-1">Estrategias prácticas para líderes que necesitan alinear a sus profesionales en contextos de alta rotación institucional y cambios organizacionales bruscos.</p>
-                        <a href="index.html#contacto" class="inline-flex items-center text-brand-primary font-medium text-sm hover:text-brand-accent transition">
-                            Agendar capacitación <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        <h3 class="font-serif text-xl font-bold text-brand-primary mb-3">Neurociencia Aplicada</h3>
+                        <p class="text-slate-500 text-sm mb-6 flex-1 leading-relaxed">Cómo el estrés prolongado altera la toma de decisiones en altos directivos.</p>
+                        <a href="index.html#contacto" class="text-xs font-bold text-brand-primary uppercase tracking-wider hover:text-brand-accent transition-colors inline-flex items-center">
+                            Conocer más <i class="fas fa-arrow-right ml-2 text-[10px]"></i>
                         </a>
                     </div>
                 </article>
             </div>
             
-            <div class="mt-16 text-center">
-                <a href="index.html" class="inline-flex items-center text-brand-primary font-medium hover:underline">
-                    <i class="fas fa-arrow-left mr-2"></i> Volver a la página principal
+            <div class="mt-20 text-center reveal">
+                <a href="index.html" class="inline-flex items-center text-brand-accent font-semibold hover:text-brand-primary transition-colors group">
+                    <i class="fas fa-arrow-left mr-2 group-hover:-translate-x-1 transition-transform"></i> Volver a la página principal
                 </a>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex items-center gap-2">
-                    <img src="image-removebg-preview (3).png" alt="Feed@Back Logo" class="h-8 w-auto object-contain">
-                    <span class="font-bold text-white tracking-tight">Feed@Back EIRL</span>
+    <footer class="bg-brand-primary pt-20 pb-12 text-white">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-3">
+                    <img src="logo-feedback.png" alt="Feed@Back Logo" class="h-8 w-auto object-contain">
+                    <span class="font-serif font-bold text-white tracking-tight">Feed@Back EIRL</span>
                 </div>
-                <p class="text-sm text-center md:text-left">&copy; 2024 Bernabé Carrasco Sánchez. Todos los derechos reservados.</p>
-                <div class="flex space-x-4">
-                    <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/56974983850" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
+                <p class="text-sm text-slate-400">&copy; 2026 Bernabé Carrasco Sánchez. Todos los derechos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="https://linkedin.com" target="_blank" class="text-slate-400 hover:text-white transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/56974983850" target="_blank" class="text-slate-400 hover:text-brand-whatsapp transition-colors text-xl"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Bottom Navigation Bar (Mobile) -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 z-[100] px-2 py-2 md:hidden flex justify-around items-center shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+        <a href="cursos.html" class="flex flex-col items-center gap-1 p-2 text-slate-500">
+            <i class="fas fa-graduation-cap text-xl"></i>
+            <span class="text-[10px] font-semibold uppercase tracking-wider">Formación</span>
+        </a>
+        <a href="noticias.html" class="flex flex-col items-center gap-1 p-2 text-brand-accent">
+            <i class="fas fa-newspaper text-xl"></i>
+            <span class="text-[10px] font-semibold uppercase tracking-wider">Actualidad</span>
+        </a>
+        <a href="interes.html" class="flex flex-col items-center gap-1 p-2 text-slate-500">
+            <i class="fas fa-book-open text-xl"></i>
+            <span class="text-[10px] font-semibold uppercase tracking-wider">Interés</span>
+        </a>
+        <a href="index.html#contacto" class="flex flex-col items-center gap-1 p-2 text-slate-500">
+            <i class="fas fa-envelope text-xl"></i>
+            <span class="text-[10px] font-semibold uppercase tracking-wider">Contacto</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>

@@ -2,24 +2,29 @@
 <html lang="es" class="scroll-smooth">
 
 <head>
-    <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Bernabé Carrasco | Psicoterapeuta & Executive Coach</title>
     <meta name="description"
-        content="Acompañamiento psicológico y coaching para personas, líderes y organizaciones por Bernabé Carrasco Sánchez. Más de 20 años de experiencia.">
+        content="Psicoterapia psicoanalítica, coaching ejecutivo y formación para equipos por Bernabé Carrasco Sánchez. Más de 20 años de experiencia.">
 
-    <!-- Google Fonts: Playfair Display (Elegancia/Autoridad) e Inter (Legibilidad moderna) -->
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bernabe.cl/">
+    <meta property="og:title" content="Bernabé Carrasco | Psicoterapeuta & Executive Coach">
+    <meta property="og:description" content="Acompañamiento psicológico y coaching estratégico para líderes y organizaciones.">
+    <meta property="og:image" content="https://bernabe.cl/24%20abr%202026,%2010_40_23%20p.m..png">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 
-    <!-- FontAwesome para Íconos -->
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Tailwind CSS -->
+    <!-- External Styles & Tailwind -->
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -31,14 +36,14 @@
                     },
                     colors: {
                         brand: {
-                            ink: '#0f1115', // Deep elegant black
-                            paper: '#ffffff', // Background
-                            surface: '#f8f9fa', // Light gray background for sections
-                            surfaceAlt: '#f1f3f5', // Slightly darker gray
-                            primary: '#212529', // Charcoal (main identity)
-                            accent: '#b4975a', // Elegant Gold (CTAs, links)
-                            accentLight: '#fdfbf7', // Light gold for backgrounds
-                            whatsapp: '#10b981', // WhatsApp Green
+                            ink: '#0f1115',
+                            paper: '#ffffff',
+                            surface: '#f8f9fa',
+                            surfaceAlt: '#f1f3f5',
+                            primary: '#212529',
+                            accent: '#b4975a',
+                            accentLight: '#fdfbf7',
+                            whatsapp: '#10b981',
                         }
                     },
                     boxShadow: {
@@ -49,70 +54,9 @@
             }
         }
     </script>
-    <style>
-        body {
-            background-color: #ffffff;
-            color: #334155;
-            /* slate-700 */
-        }
-
-        /* Navbar transitions */
-        .navbar-scrolled {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid #f1f5f9;
-            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
-            padding-top: 0.75rem !important;
-            padding-bottom: 0.75rem !important;
-        }
-
-        /* Custom minimal accordion */
-        details>summary {
-            list-style: none;
-        }
-
-        details>summary::-webkit-details-marker {
-            display: none;
-        }
-
-        /* Mobile specific enhancements */
-        @media (max-width: 768px) {
-            .mobile-menu-active {
-                overflow: hidden;
-            }
-
-            .mobile-overlay {
-                background: rgba(255, 255, 255, 0.98);
-                backdrop-filter: blur(20px);
-            }
-
-            .tap-highlight-transparent {
-                -webkit-tap-highlight-color: transparent;
-            }
-        }
-
-        /* Subtle patterns */
-        .pattern-dots {
-            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-
-        /* Smooth reveal animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
 </head>
 
-<body class="font-sans antialiased selection:bg-brand-accent selection:text-white relative pb-20 md:pb-0">
+<body class="font-sans antialiased selection:bg-brand-accent selection:text-white relative pb-safe">
 
     <!-- Navbar (Clean & Minimalist) -->
     <nav class="fixed w-full z-50 transition-all duration-500 pt-6 pb-6 bg-transparent" id="navbar">
@@ -121,7 +65,7 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer tap-highlight-transparent"
                     onclick="window.scrollTo(0,0)">
-                    <img src="image-removebg-preview (3).png" alt="Feed@Back Logo" class="h-10 w-auto object-contain">
+                    <img src="logo-feedback.png" alt="Feed@Back Logo" class="h-10 w-auto object-contain">
                     <div class="flex flex-col">
                         <span
                             class="font-serif font-bold text-xl text-brand-primary tracking-tight leading-none mb-1">Feed@Back</span>
@@ -215,7 +159,7 @@
 
     <!-- HERO SECTION (Elegant Split Layout) -->
     <section
-        class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-brand-paper min-h-[90vh] flex items-center">
+        class="relative hero-mobile-adjust pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-brand-paper min-h-[90vh] flex items-center">
         <!-- Abstract background accent -->
         <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-surface rounded-l-[100px] -z-10 hidden lg:block"></div>
         <div
@@ -326,13 +270,13 @@
     </section>
 
     <!-- SOBRE MÍ SECTION -->
-    <section id="sobre-mi" class="py-20 lg:py-28 bg-brand-surface relative z-10">
+    <section id="sobre-mi" class="py-20 lg:py-32 section-padding-mobile bg-brand-surface relative z-10">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
                 <div class="lg:col-span-5 reveal">
                     <div class="aspect-[4/3] lg:aspect-square rounded-[2rem] overflow-hidden shadow-premium">
-                        <img src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&q=80&w=1000"
-                            alt="Consultoría Ejecutiva" class="w-full h-full object-cover">
+                        <img src="sobre-mi.png"
+                            alt="Bernabé Carrasco - Enfoque Humano" class="w-full h-full object-cover">
                     </div>
                 </div>
 
@@ -364,7 +308,7 @@
     </section>
 
     <!-- SERVICIOS -->
-    <section id="servicios" class="py-20 lg:py-28 bg-white">
+    <section id="servicios" class="py-20 lg:py-28 section-padding-mobile bg-white">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-14 reveal">
                 <div class="inline-flex items-center gap-2 mb-4 justify-center">
@@ -410,7 +354,7 @@
     </section>
 
     <!-- TRAYECTORIA -->
-    <section id="trayectoria" class="py-20 lg:py-28 bg-brand-surface">
+    <section id="trayectoria" class="py-20 lg:py-32 section-padding-mobile bg-brand-surface">
         <div class="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8 reveal">
             <div class="text-center mb-14">
                 <div class="inline-flex items-center gap-2 mb-4 justify-center">
@@ -456,7 +400,7 @@
     </section>
 
     <!-- BENEFICIOS -->
-    <section id="beneficios" class="py-20 lg:py-28 bg-brand-primary text-white relative overflow-hidden reveal">
+    <section id="beneficios" class="py-20 lg:py-32 section-padding-mobile bg-brand-primary text-white relative overflow-hidden reveal">
         <div class="absolute top-0 right-0 w-1/2 h-full bg-slate-800/20 transform skew-x-12 translate-x-1/4"></div>
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -481,7 +425,7 @@
     </section>
 
     <!-- ACTUALIDAD -->
-    <section id="actualidad" class="py-20 lg:py-28 bg-brand-surfaceAlt reveal">
+    <section id="actualidad" class="py-20 lg:py-32 section-padding-mobile bg-brand-surfaceAlt reveal">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                 <div class="max-w-2xl">
@@ -604,7 +548,7 @@
             <!-- Footer Bottom -->
             <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex items-center gap-3">
-                    <img src="image-removebg-preview (3).png" alt="Feed@Back Logo" class="h-8 w-auto object-contain">
+                    <img src="logo-feedback.png" alt="Feed@Back Logo" class="h-8 w-auto object-contain">
                     <span class="font-serif font-bold text-white tracking-tight">Feed@Back EIRL</span>
                 </div>
 
@@ -634,75 +578,7 @@
     </a>
 
     <!-- Scripts -->
-    <script>
-        // Menu Móvil Lógica
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const line1 = document.getElementById('line1');
-        const line2 = document.getElementById('line2');
-        const line3 = document.getElementById('line3');
-        let isMenuOpen = false;
-
-        function toggleMenu() {
-            isMenuOpen = !isMenuOpen;
-            if (isMenuOpen) {
-                menu.classList.remove('opacity-0', 'pointer-events-none');
-                document.body.classList.add('mobile-menu-active');
-                line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
-                line2.style.opacity = '0';
-                line3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
-            } else {
-                menu.classList.add('opacity-0', 'pointer-events-none');
-                document.body.classList.remove('mobile-menu-active');
-                line1.style.transform = 'none';
-                line2.style.opacity = '1';
-                line3.style.transform = 'none';
-            }
-        }
-
-        btn.addEventListener('click', toggleMenu);
-
-        const mobileLinks = menu.querySelectorAll('.mobile-link');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (isMenuOpen) toggleMenu();
-            });
-        });
-
-        // Navbar Scroll Effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                navbar.classList.add('navbar-scrolled');
-                navbar.classList.remove('pt-6', 'pb-6');
-            } else {
-                navbar.classList.remove('navbar-scrolled');
-                navbar.classList.add('pt-6', 'pb-6');
-            }
-        });
-
-        window.dispatchEvent(new Event('scroll'));
-
-        // Intersection Observer para Animaciones (Scroll Reveal)
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal').forEach((el) => {
-            observer.observe(el);
-        });
-    </script>
+    <script src="script.js"></script>
 
     <!-- Bottom Navigation Bar (Mobile App Style) -->
     <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 z-[100] px-2 py-2 md:hidden flex justify-around items-center shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
