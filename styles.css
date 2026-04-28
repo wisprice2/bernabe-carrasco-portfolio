@@ -69,6 +69,11 @@ body {
     padding-bottom: calc(5rem + env(safe-area-inset-bottom));
 }
 
+/* Utils */
+.logo-white {
+    filter: brightness(0) invert(1);
+}
+
 /* Glass Effect */
 .glass {
     background: rgba(255, 255, 255, 0.85);
