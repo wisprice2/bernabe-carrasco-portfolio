@@ -19,6 +19,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <!-- SEO & Canonical -->
+    <link rel="canonical" href="https://bernabe.cl/" />
+    
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Bernabé Carrasco | Feed@Back",
+      "image": "https://bernabe.cl/logo-feedback.png",
+      "url": "https://bernabe.cl",
+      "telephone": "+56974983850",
+      "email": "bernabecarrasco@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Concepción",
+        "addressCountry": "CL"
+      },
+      "description": "Psicoterapia psicoanalítica y coaching ejecutivo para líderes y organizaciones.",
+      "sameAs": [
+        "https://www.linkedin.com/in/bernab%C3%A9-carrasco-s%C3%A1nchez-a4a3a851/"
+      ]
+    }
+    </script>
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -185,7 +210,7 @@
                     </h1>
 
                     <p class="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
-                        Postgrado en Psicología Clínica y la Salud, coaching ejecutivo y formación para equipos.
+                        Metodologías clínicas para potenciar el alto desempeño en directivos y cohesión en equipos de alta complejidad.
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4">
@@ -226,8 +251,8 @@
                     <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-accentLight rounded-full z-0"></div>
 
                     <div class="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl">
-                        <img src="24 abr 2026, 10_40_23 p.m..png" alt="Bernabé Carrasco Sánchez"
-                            class="w-full h-auto object-cover aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5] filter contrast-105">
+                        <img src="sobre-mi.png" alt="Bernabé Carrasco Sánchez"
+                            class="w-full h-auto object-cover aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5] filter contrast-105" loading="lazy">
 
                         <!-- Floating Badge -->
                         <div
@@ -508,7 +533,7 @@
                 <!-- Contact Form -->
                 <div class="bg-slate-800/50 p-8 sm:p-10 rounded-[2rem] border border-slate-700/50 backdrop-blur-sm">
                     <form
-                        onsubmit="event.preventDefault(); alert('Mensaje enviado. En producción, conectar a un backend.');"
+                        id="contact-form"
                         class="space-y-6">
                         <div>
                             <label class="sr-only">Nombre completo</label>
@@ -574,14 +599,29 @@
     </footer>
 
     <!-- Botón Flotante WhatsApp -->
-    <a href="https://wa.me/56974983850?text=Hola%20Bernabé,%20estoy%20en%20tu%20sitio%20web%20y%20me%20gustaría%20información."
-        target="_blank"
-        class="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 w-14 h-14 sm:w-16 sm:h-16 bg-brand-whatsapp text-white rounded-full flex items-center justify-center text-3xl shadow-[0_10px_30px_rgba(16,185,129,0.3)] hover:scale-110 transition-transform z-50 hover:bg-[#0ea674] tap-highlight-transparent">
+    <a href="https://wa.me/56974983850" target="_blank"
+        class="fixed bottom-[100px] right-6 bg-brand-whatsapp text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-premium-hover z-[100] transition-transform hover:scale-110 tap-highlight-transparent md:bottom-10">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Scripts -->
     <script src="script.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const name = form.querySelector('input[placeholder*="Ej."]').value;
+            const email = form.querySelector('input[type="email"]').value;
+            const interest = form.querySelector('select').options[form.querySelector('select').selectedIndex].text;
+            const message = form.querySelector('textarea').value;
+            
+            const text = `Hola Bernabé, me contacto a través de tu web.\n\n*Nombre:* ${name}\n*Email:* ${email}\n*Interés:* ${interest}\n*Mensaje:* ${message}`;
+            const encodedText = encodeURIComponent(text);
+            const whatsappUrl = `https://wa.me/56974983850?text=${encodedText}`;
+            
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
 
     <!-- Bottom Navigation Bar (Mobile App Style) -->
     <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 z-[100] px-2 py-2 md:hidden flex justify-around items-center shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
