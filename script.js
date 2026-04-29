@@ -91,4 +91,67 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 5. Beneficios Carousel
+    const track = document.getElementById('carousel-track');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+
+    if (track && dots.length) {
+        let current = 0;
+        const total = dots.length;
+        let autoplayTimer;
+
+        function goTo(index) {
+            current = ((index % total) + total) % total;
+            track.style.transform = `translateX(-${current * 100}%)`;
+            dots.forEach((d, i) => {
+                d.classList.toggle('bg-white', i === current);
+                d.classList.toggle('bg-white/30', i !== current);
+                d.style.transform = i === current ? 'scale(1.3)' : 'scale(1)';
+            });
+        }
+
+        function next() { goTo(current + 1); }
+        function prev() { goTo(current - 1); }
+
+        function startAutoplay() {
+            stopAutoplay();
+            autoplayTimer = setInterval(next, 7000);
+        }
+        function stopAutoplay() {
+            clearInterval(autoplayTimer);
+        }
+
+        // Arrow buttons
+        if (prevBtn) prevBtn.addEventListener('click', () => { prev(); startAutoplay(); });
+        if (nextBtn) nextBtn.addEventListener('click', () => { next(); startAutoplay(); });
+
+        // Dot buttons
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                goTo(parseInt(dot.dataset.index));
+                startAutoplay();
+            });
+        });
+
+        // Touch / Swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+        track.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoplay();
+        }, { passive: true });
+        track.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                diff > 0 ? next() : prev();
+            }
+            startAutoplay();
+        }, { passive: true });
+
+        startAutoplay();
+    }
 });
